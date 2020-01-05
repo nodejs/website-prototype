@@ -110,7 +110,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         docPages.forEach(page => {
           createPage({
-            path: `/${page.slug}`,
+            path: `/learn/${page.slug}`,
             component: docTemplate,
             context: {
               slug: page.slug,
@@ -122,7 +122,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
           if (page.slug === 'introduction-to-nodejs')
             createPage({
-              path: `/`,
+              path: `/learn`,
               component: docTemplate,
               context: {
                 slug: page.slug,

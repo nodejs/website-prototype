@@ -23,14 +23,13 @@ const Header = () => (
         </Link>
       </li>
       <li className="nav__tabs">
-        <a target="_blank" href="https://nodejs.org/en/download/">
-          Download
-        </a>
+        <a href="/learn">Learn</a>
       </li>
       <li className="nav__tabs">
-        <a target="_blank" href="https://nodejs.org/en/docs/">
-          API Docs
-        </a>
+        <a href="/docs">Documentation</a>
+      </li>
+      <li className="nav__tabs">
+        <a href="/download">Download</a>
       </li>
       <li className="nav__tabs">
         <a target="_blank" href="https://github.com/nodejs/nodejs.dev">
