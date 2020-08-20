@@ -5,7 +5,7 @@ authors: aug2uag
 section: Getting Started
 ---
 
-The material in this post are heavily inspired by [Mixu's Node.js Book](http://book.mixu.net/node/ch7.html).
+The material in this post is heavily inspired by [Mixu's Node.js Book](http://book.mixu.net/node/ch7.html).
 
 At it's core, JavaScript is designed to be non-blocking on the "main" thread, this is where views are rendered. You can imagine the importance of this in the browser. When the main thread becomes blocked it results in the infamous "freezing" that end users dread, and no other events can be dispatched resulting in the loss of data acquisition, for example.
 
