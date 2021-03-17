@@ -25,30 +25,7 @@ axios
   })
 ```
 
-Another way is to use the [Request library](https://github.com/request/request):
-
-```js
-const request = require('request')
-
-request.post(
-  'https://whatever.com/todos',
-  {
-    json: {
-      todo: 'Buy the milk'
-    }
-  },
-  (error, res, body) => {
-    if (error) {
-      console.error(error)
-      return
-    }
-    console.log(`statusCode: ${res.statusCode}`)
-    console.log(body)
-  }
-)
-```
-
-The 2 ways highlighted up to now require the use of a 3rd party library.
+Axios requires the use of a 3rd party library.
 
 A POST request is possible just using the Node.js standard modules, although it's more verbose than the two preceding options:
 

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationItem component renders correctly 1`] = `
+<div>
+  <a
+    class="t-body2 side-nav__item side-nav__item--done"
+    href="/learn/versioning"
+    id="link-versioning"
+  >
+    Versioning
+  </a>
+</div>
+`;

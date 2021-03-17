@@ -1,0 +1,43 @@
+.upcoming-releases {
+  width: 100%;
+  .react-tabs {
+    -webkit-tap-highlight-color: transparent;
+
+    &__tab-list {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      border-bottom: 1px solid #d7d8df;
+    }
+
+    &__tab {
+      display: inline-block;
+      list-style: none;
+      padding: 7px 20px;
+      cursor: pointer;
+
+      &--selected {
+        border-bottom: 4px solid var(--brand5);
+      }
+    }
+
+    &__tab-panel {
+      display: none;
+      padding: 70px 0;
+
+      &--selected {
+        display: block;
+      }
+    }
+  }
+
+  &__panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    text-align: center;
+  }
+}

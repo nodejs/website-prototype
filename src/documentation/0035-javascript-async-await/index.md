@@ -48,7 +48,7 @@ const doSomething = async () => {
 This is a simple example of async/await used to run a function asynchronously:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Modern Asynchronous JavaScript with Async and Await"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0035-01?path=server.js&previewSize=25&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0035-01 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -97,7 +97,7 @@ aFunction().then(alert) // This will alert 'test'
 and it's the same as:
 
 ```js
-const aFunction = async () => {
+const aFunction = () => {
   return Promise.resolve('test')
 }
 
@@ -144,7 +144,7 @@ getFirstUserData()
 Async functions can be chained very easily, and the syntax is much more readable than with plain promises:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Multiple async functions in series"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0035-02?path=server.js&previewSize=30&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0035-02 on Glitch"
   style="height: 400px; width: 100%; border: 0;">

@@ -1,26 +1,29 @@
 import { isMobileScreen } from './isScreenWithinWidth';
 
+/* eslint-disable */
+// this is from stack overflow I assume
 const easeInOutCubic = (t: number, b: number, c: number, d: number) =>
   (t /= d / 2) < 1
     ? (c / 2) * t * t * t + b
     : (c / 2) * ((t -= 2) * t * t + 2) + b;
+/* eslint-enable */
 
 export function scrollTo(
-  scrollTo: number,
+  scrollToPoint: number,
   element: HTMLElement | null = null,
-  duration: number = 333
+  duration = 333
 ): Promise<boolean> {
   const start =
     ((element && element.scrollTop) ||
       window.pageYOffset ||
       document.documentElement.scrollTop) -
     ((element && element.clientTop) || 0);
-  const change = scrollTo - start;
+  const change = scrollToPoint - start;
   let previousTime = window.performance.now();
   let currentTime = 0;
 
-  return new Promise((resolve, _reject) => {
-    const animateScroll = () => {
+  return new Promise<boolean>((resolve): void => {
+    const animateScroll = (): void => {
       const time = window.performance.now();
       const increment = time - previousTime;
       previousTime = time;
@@ -41,10 +44,16 @@ export function scrollTo(
 const SPEED_MODIFIER = 0.9;
 const BASE_TIME = 500;
 
+interface ScrollParams {
+  newScrollPos: number;
+  scrollWindow: null | HTMLElement;
+  scrollTime: number;
+}
+
 export const calcNavScrollParams = (
   linkHeight: number,
   navElement: HTMLElement
-) => {
+): ScrollParams => {
   const navRect = navElement.getBoundingClientRect();
   let newScrollPos: number;
   let scrollWindow: HTMLElement | null;

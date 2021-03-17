@@ -7,7 +7,7 @@ section: Getting Started
 
 To uninstall a package you have previously installed **locally** (using `npm install <package-name>` in the `node_modules` folder, run
 
-```sh
+```bash
 npm uninstall <package-name>
 ```
 
@@ -17,20 +17,20 @@ Using the `-S` flag, or `--save`, this operation will also remove the reference 
 
 If the package was a development dependency, listed in the devDependencies of the `package.json` file, you must use the `-D` / `--save-dev` flag to remove it from the file:
 
-```sh
+```bash
 npm uninstall -S <package-name>
 npm uninstall -D <package-name>
 ```
 
 If the package is installed **globally**, you need to add the `-g` / `--global` flag:
 
-```sh
+```bash
 npm uninstall -g <package-name>
 ```
 
 for example:
 
-```sh
+```bash
 npm uninstall -g webpack
 ```
 

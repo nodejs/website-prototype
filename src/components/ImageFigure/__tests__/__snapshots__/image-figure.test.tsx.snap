@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageFigure component renders correctly with footer 1`] = `
+<div>
+  <figure>
+    <a
+      href="mock-src"
+      rel="noopener noreferrer"
+      target="_self"
+    >
+      <img
+        alt="mock-alternate"
+        class="figure__image"
+        src="mock-src"
+      />
+    </a>
+    <figcaption>
+      mock-caption
+    </figcaption>
+  </figure>
+</div>
+`;

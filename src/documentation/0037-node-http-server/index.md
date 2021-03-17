@@ -8,7 +8,7 @@ section: Getting Started
 Here is a sample Hello World HTTP web server:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Build an HTTP Server"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0037-01?path=server.js&previewSize=33&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0037-01 on Glitch"
   style="height: 400px; width: 100%; border: 0;">

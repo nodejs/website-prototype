@@ -31,8 +31,8 @@ Here are some external references that may help provide further context on OKRs.
   * **Key Result:** Create a feature roadmap
   * **Key Result:** Track features & priorities in one place (project?)
   * **Key Result:** Make available the top two features in nodejs.org:
-    1. Docs — https://nodejs.org/en/docs/
-    2. Download — https://nodejs.org/en/download/
+    1. Docs — <https://nodejs.org/en/docs/>
+    2. Download — <https://nodejs.org/en/download/>
 
 * **Objective:** Make explicit the channels of interfacing internally and with larger org
   * **Key Result:** Write down implicit team norms

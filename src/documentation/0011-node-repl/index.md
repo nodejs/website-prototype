@@ -7,26 +7,28 @@ section: Getting Started
 
 The `node` command is the one we use to run our Node.js scripts:
 
-```sh
+```bash
 node script.js
 ```
 
 If we omit the filename, we use it in REPL mode:
 
-```sh
+```bash
 node
 ```
 
+> Note: REPL also known as Read Evaluate Print Loop is a programming language environment(Basically a console window) that takes single expression as user input and returns the result back to the console after execution.
+
 If you try it now in your terminal, this is what happens:
 
-```txt
+```bash
 ❯ node
 >
 ```
 
 the command stays in idle mode and waits for us to enter something.
 
-> Tip: if you are unsure how to open your terminal, google "How to open terminal on <your-operating-system>".
+> Tip: if you are unsure how to open your terminal, google "How to open terminal on \<your-operating-system\>".
 
 The REPL is waiting for us to enter some JavaScript code, to be more precise.
 
@@ -72,7 +74,7 @@ If after some code you type `_`, that is going to print the result of the last o
 The REPL has some special commands, all starting with a dot `.`. They are
 
 * `.help`: shows the dot commands help
-* `.editor`: enables editor more, to write multiline JavaScript code with ease. Once you are in this mode, enter ctrl-D to run the code you wrote.
+* `.editor`: enables editor mode, to write multiline JavaScript code with ease. Once you are in this mode, enter ctrl-D to run the code you wrote.
 * `.break`: when inputting a multi-line expression, entering the .break command will abort further input. Same as pressing ctrl-C.
 * `.clear`: resets the REPL context to an empty object and clears any multi-line expression currently being input.
 * `.load`: loads a JavaScript file, relative to the current working directory

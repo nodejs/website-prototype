@@ -7,7 +7,7 @@ section: Getting Started
 
 You can pass any number of arguments when invoking a Node.js application using
 
-```sh
+```bash
 node app.js
 ```
 
@@ -15,13 +15,13 @@ Arguments can be standalone or have a key and a value.
 
 For example:
 
-```sh
+```bash
 node app.js joe
 ```
 
 or
 
-```sh
+```bash
 node app.js name=joe
 ```
 
@@ -31,7 +31,7 @@ The way you retrieve it is using the `process` object built into Node.js.
 
 It exposes an `argv` property, which is an array that contains all the command line invocation arguments.
 
-The first argument is the full path of the `node` command.
+The first element is the full path of the `node` command.
 
 The second element is the full path of the file being executed.
 
@@ -53,7 +53,7 @@ const args = process.argv.slice(2)
 
 If you have one argument without an index name, like this:
 
-```sh
+```bash
 node app.js joe
 ```
 
@@ -66,7 +66,7 @@ args[0]
 
 In this case:
 
-```sh
+```bash
 node app.js name=joe
 ```
 
@@ -80,6 +80,6 @@ args['name'] //joe
 
 This time you need to use double dashes before each argument name:
 
-```sh
+```bash
 node app.js --name=joe
 ```

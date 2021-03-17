@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero component renders correctly 1`] = `
+<div>
+  <div
+    class="home-page-hero"
+  >
+    <h1>
+      Introduction to Node.js
+    </h1>
+    <h2
+      class="sub-title t-subheading"
+    >
+      Mock SubTitle
+    </h2>
+    <div
+      class="btn-ctas"
+    >
+      <div
+        class="download-lts-container"
+      >
+        <a
+          class="circular-container"
+          href="https://nodejs.org/dist/mmock-version-2/node-mmock-version-2.tar.gz"
+        >
+          Download Node (LTS)
+        </a>
+        <p
+          class="t-caption"
+        >
+          Version mock-version-2 - 
+          <a
+            href="https://nodejs.org/dist/mock-version-1/node-mock-version-1.tar.gz"
+          >
+            Get Current
+          </a>
+        </p>
+      </div>
+      <a
+        class="circular-container inverse"
+        href="/learn"
+      >
+        Learn Node
+      </a>
+    </div>
+  </div>
+</div>
+`;

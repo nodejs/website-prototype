@@ -19,7 +19,7 @@ Other browsers have their own JavaScript engine:
 
 * Firefox has [**SpiderMonkey**](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)
 * Safari has [**JavaScriptCore**](https://developer.apple.com/documentation/javascriptcore) (also called Nitro)
-* Edge has [**Chakra**](https://github.com/Microsoft/ChakraCore)
+* Edge was originally based on [**Chakra**](https://github.com/Microsoft/ChakraCore) but has more recently been [rebuilt using Chromium](https://support.microsoft.com/en-us/help/4501095/download-the-new-microsoft-edge-based-on-chromium) and the V8 engine.
 
 and many others exist as well.
 
@@ -39,7 +39,7 @@ On the web, there is a race for performance that's been going on for years, and 
 
 JavaScript is generally considered an interpreted language, but modern JavaScript engines no longer just interpret JavaScript, they compile it.
 
-This happens since 2009 when the SpiderMonkey JavaScript compiler was added to Firefox 3.5, and everyone followed this idea.
+This has been happening since 2009, when the SpiderMonkey JavaScript compiler was added to Firefox 3.5, and everyone followed this idea.
 
 JavaScript is internally compiled by V8 with **just-in-time** (JIT) **compilation** to speed up the execution.
 

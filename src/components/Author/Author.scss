@@ -1,0 +1,19 @@
+.list {
+  list-style: none;
+}
+
+.link {
+  margin-left: 0.5rem;
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.img {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  border-radius: 100%;
+  border: 1px solid var(--brand-light);
+  transition: all 0.2s ease-in-out;
+}

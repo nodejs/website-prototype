@@ -1,0 +1,47 @@
+.downloads-table-container {
+  overflow-x: auto;
+
+  .downloads-table {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body3);
+
+    thead {
+      th {
+        background: var(--color-fill-body);
+        color: var(--color-text-primary);
+        text-align: left;
+        padding: var(--space-08) var(--space-16);
+        font-weight: normal;
+      }
+      th:first-child {
+        border-radius: 3px 0px 0px 0px;
+      }
+      th:last-child {
+        border-radius: 0px 3px 0px 0px;
+      }
+    }
+
+    tbody {
+      tr {
+        background: var(--color-fill-app);
+
+        td {
+          padding: var(--space-16) var(--space-16);
+          border-bottom: 1px solid #e2e3e7;
+
+          .dark-mode & {
+            border-bottom: 1px solid var(--color-border-primary);
+          }
+        }
+
+        &:hover {
+          background: var(--brand10);
+        }
+
+        .dark-mode &:hover {
+          background: var(--brand9);
+        }
+      }
+    }
+  }
+}

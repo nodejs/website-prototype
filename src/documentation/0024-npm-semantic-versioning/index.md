@@ -39,7 +39,7 @@ The rules use those symbols:
 
 Let's see those rules in detail:
 
-* `^`: if you write `^0.13.0` when running `npm update` it can update to patch and minor releases: `0.13.1`, `0.14.0` and so on.
+* `^`:  It will only do updates that do not change the leftmost non-zero number. If you write `^0.13.0`, when running `npm update`, it can update to `0.13.1`, `0.13.2`, and so on, but not to `0.14.0` or above. If you write `^1.13.0`, when running `npm update`, it can update to `1.13.1`, `1.14.0` and so on, but will not update to `2.0.0` or above.
 * `~`: if you write `~0.13.0`, when running `npm update` it can update to patch releases: `0.13.1` is ok, but `0.14.0` is not.
 * `>`: you accept any version higher than the one you specify
 * `>=`: you accept any version equal to or higher than the one you specify

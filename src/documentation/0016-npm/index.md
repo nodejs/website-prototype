@@ -89,7 +89,7 @@ For example:
   "scripts": {
     "start-dev": "node lib/server-development",
     "start": "node lib/server-production"
-  },
+  }
 }
 ```
 
@@ -101,7 +101,7 @@ It's very common to use this feature to run Webpack:
     "watch": "webpack --watch --progress --colors --config webpack.conf.js",
     "dev": "webpack --progress --colors --config webpack.conf.js",
     "prod": "NODE_ENV=production webpack -p --config webpack.conf.js",
-  },
+  }
 }
 ```
 

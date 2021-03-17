@@ -1,0 +1,81 @@
+$downloadable-item-height: 40px;
+
+.download-additional {
+  margin-top: 133px;
+  width: 100%;
+  font-weight: var(--font-weight-semibold);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    .download-toogle {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-display5);
+    line-height: var(--line-height-display4);
+  }
+
+  &__body {
+    margin-top: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d7d8df;
+    outline: none;
+    margin-top: -1px; // Cancels overlapping borders extra thickness
+    padding: 16px 0 0 16px;
+    height: $downloadable-item-height;
+    transition: height 30ms ease-in;
+
+    &__expanded {
+      height: auto;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+      &__arrow {
+        margin-right: 16px;
+        width: 0;
+        height: 0;
+        &__right {
+          margin-top: 6px;
+          border-top: 5px solid transparent;
+          border-left: 6px solid #757575;
+          border-bottom: 5px solid transparent;
+          border-radius: 3px;
+        }
+        &__down {
+          margin-top: 8px;
+          border-left: 5px solid transparent;
+          border-top: 6px solid #757575;
+          border-right: 5px solid transparent;
+          border-radius: 3px;
+        }
+      }
+    }
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      &__link {
+        display: flex;
+        align-items: center;
+        background: var(--brand2);
+        color: var(--brand6);
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 36px;
+        border-radius: 40px;
+        margin: 5px;
+        padding: 0 15px 0 0;
+      }
+    }
+  }
+}

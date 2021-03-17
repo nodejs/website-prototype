@@ -1,8 +1,10 @@
-const createSlug = require('./src/util/createSlug');
+/* eslint-disable @typescript-eslint/no-var-requires */
+// Use in this file CommonJS syntax see https://www.gatsbyjs.org/docs/migrating-from-v1-to-v2/#convert-to-either-pure-commonjs-or-pure-es6
 const path = require('path');
+const createSlug = require('./util-node/createSlug');
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect, createNodeField } = actions;
+  const { createPage, createRedirect } = actions;
 
   return new Promise((resolve, reject) => {
     const docTemplate = path.resolve('./src/templates/learn.tsx');
@@ -12,7 +14,9 @@ exports.createPages = ({ graphql, actions }) => {
         `
           {
             allMarkdownRemark(
-              filter: { fields: { slug: { ne: "" } } }
+              filter: {
+                fields: { slug: { nin: ["", "nodejs-community", "homepage"] } }
+              }
               sort: { fields: [fileAbsolutePath], order: ASC }
             ) {
               edges {
@@ -57,6 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then(result => {
         if (result.errors) {
+          // eslint-disable-next-line no-console
           console.log(result.errors);
           reject(result.errors);
         }
@@ -65,7 +70,7 @@ exports.createPages = ({ graphql, actions }) => {
         const docPages = [];
         edges.forEach(({ node }, index) => {
           const {
-            fields: { slug, authors },
+            fields: { slug },
             frontmatter: { title, section },
             parent: { relativePath },
           } = node;
@@ -110,51 +115,57 @@ exports.createPages = ({ graphql, actions }) => {
 
         docPages.forEach(page => {
           createPage({
-            path: `/${page.slug}`,
+            path: `/learn/${page.slug}`,
             component: docTemplate,
             context: {
               slug: page.slug,
               next: page.next,
               previous: page.previous,
               relativePath: page.relativePath,
-              navigationData: navigationData,
+              navigationData,
             },
           });
-          if (page.slug === 'introduction-to-nodejs')
+          createRedirect({
+            fromPath: `/${page.slug}`,
+            toPath: `/learn/${page.slug}`,
+            isPermanent: true,
+          });
+          if (page.slug === 'introduction-to-nodejs') {
             createPage({
-              path: `/`,
+              path: `/learn`,
               component: docTemplate,
               context: {
                 slug: page.slug,
                 next: page.next,
                 previous: page.previous,
                 relativePath: page.relativePath,
-                navigationData: navigationData,
+                navigationData,
               },
             });
+          }
         });
       })
     );
   });
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const { createNodeField } = actions;
 
     const slug = createSlug(node.frontmatter.title);
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: slug,
     });
 
-    let authors = node.frontmatter.authors;
+    let { authors } = node.frontmatter;
     if (authors) {
       authors = authors.split(',');
       createNodeField({
         node,
-        name: `authors`,
+        name: 'authors',
         value: authors,
       });
     }

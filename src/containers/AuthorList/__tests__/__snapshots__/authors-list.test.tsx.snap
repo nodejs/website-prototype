@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorsList component renders correctly 1`] = `
+<div>
+  <ul
+    class="list"
+  >
+    <h5>
+      Contributors
+    </h5>
+    <li>
+      <a
+        class="link"
+        href="https://github.com/test-author"
+        rel="noopener noreferrer"
+        style="margin-left: 0px;"
+        target="_blank"
+        title="test-author"
+      >
+        <img
+          alt="test-author"
+          class="img"
+          src="https://github.com/test-author.png?size=60"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        class="link"
+        href="https://github.com/another-test-author"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="another-test-author"
+      >
+        <img
+          alt="another-test-author"
+          class="img"
+          src="https://github.com/another-test-author.png?size=60"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+`;

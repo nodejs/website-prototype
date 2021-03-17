@@ -9,7 +9,7 @@ The usual way to run a Node.js program is to run the `node` globally available c
 
 If your main Node.js application file is `app.js`, you can call it by typing:
 
-```sh
+```bash
 node app.js
 ```
 

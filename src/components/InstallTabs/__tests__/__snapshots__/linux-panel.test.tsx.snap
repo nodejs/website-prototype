@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for LinuxPanel component renders correctly 1`] = `
+<div>
+  <div>
+    <pre
+      class="shell-box"
+    >
+      <div
+        class="shell-box-top"
+      >
+        <span>
+          SHELL
+        </span>
+        <button
+          type="button"
+        >
+          copy
+        </button>
+      </div>
+      <code>
+        <span
+          class="install__text__no-select"
+        >
+          $
+        </span>
+        <span
+          class="install__text__command"
+        >
+          apk add -U
+        </span>
+         curl bash ca-certificates openssl ncurses coreutils python2 make gcc g++ libgcc linux-headers grep util-linux binutils findutils
+      </code>
+    </pre>
+    <pre
+      class="shell-box"
+    >
+      <div
+        class="shell-box-top"
+      >
+        <span>
+          SHELL
+        </span>
+        <button
+          type="button"
+        >
+          copy
+        </button>
+      </div>
+      <code>
+        <span
+          class="install__text__no-select"
+        >
+          $
+        </span>
+        <span
+          class="install__text__command"
+        >
+           curl -o- 
+        </span>
+        https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh
+         
+        <span
+          class="install__text__command"
+        >
+          | bash
+        </span>
+      </code>
+    </pre>
+    <pre
+      class="shell-box"
+    >
+      <div
+        class="shell-box-top"
+      >
+        <span>
+          SHELL
+        </span>
+        <button
+          type="button"
+        >
+          copy
+        </button>
+      </div>
+      <code>
+        <span
+          class="install__text__no-select"
+        >
+          $
+        </span>
+        <span
+          class="install__text__command"
+        >
+           nvm
+        </span>
+         install --lts
+      </code>
+    </pre>
+    <br />
+    <br />
+    <a
+      class="install__docs-button"
+      href="https://nodejs.org/en/download/package-manager/#nvm"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Read documentation
+    </a>
+  </div>
+</div>
+`;

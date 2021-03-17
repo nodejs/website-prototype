@@ -29,22 +29,22 @@ One easy way to demonstrate this is [cowsay](https://www.npmjs.com/package/cowsa
 
 The cowsay package provides a command line program that can be executed to make a cow say something (and other animals as well 🦊).
 
-When you install the package using `npm install cowsay`, it will install itself and a few dependencies in the node_modules folder:
+When you install the package using `npm install cowsay`, it will install itself and a few dependencies in the `node_modules` folder:
 
 ![The node_modules folder content](node_modules-content.png)
 
-There is a hidden .bin folder, which contains symbolic links to the cowsay binaries:
+There is a hidden `.bin` folder, which contains symbolic links to the cowsay binaries:
 
 ![The binary files](binary-files.png)
 
 How do you execute those?
 
-You can of course type `./node_modules/.bin/cowsay` to run it, and it works, but npx, included in the recent versions of npm (since 5.2), is a much better option. You just run:
+You can of course type `./node_modules/.bin/cowsay` to run it, and it works, but `npx`, included in the recent versions of `npm` (since 5.2), is a much better option. You just run:
 
-```sh
+```bash
 npx cowsay
 ```
 
-and npx will find the package location.
+and `npx` will find the package location.
 
 ![Cow says something](cow-say.png)

@@ -6,10 +6,13 @@ yarn-error.log
 # Build directory
 /public
 .DS_Store
+build
 
 .env
+.env.production
 .firebase/*
 coverage
 .vscode
 .history
 yarn.lock
+.idea/

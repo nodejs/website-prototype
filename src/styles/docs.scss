@@ -1,0 +1,235 @@
+.api-nav {
+  background-color: var(--color-fill-side-nav);
+  height: calc(100vh - var(--nav-height));
+  overflow: auto;
+  position: sticky;
+  top: var(--nav-height);
+}
+
+.api-nav__version {
+  width: 100%;
+}
+
+.api-nav__list {
+  list-style: none;
+  padding: 0 var(--space-20);
+}
+
+.api-nav__list-title {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin: 0 0 calc(var(--space-20) - (var(--space-12) / 2)) 0;
+  display: flex;
+  align-items: center;
+}
+
+.api-nav__list-item {
+  list-style: none;
+  margin: 0 0 var(--space-20) 0;
+}
+
+.api-nav__sub-list {
+  list-style: none;
+  padding: 0 0 0 var(--space-24);
+}
+
+.api-nav__sub-list-item {
+  list-style: none;
+}
+
+.api-nav__sub-list-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.15s;
+  padding: calc(var(--space-12) / 2) 0;
+  display: block;
+
+  &:hover {
+    color: var(--color-text-accent);
+    text-decoration: underline;
+  }
+}
+
+.api-key {
+  padding: 0;
+  list-style: none;
+
+  > .api-key__item {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.api-key__section {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* margin: 0.8rem 0; */
+  background: var(--black2);
+  border-radius: 4px;
+  grid-gap: 0.8rem;
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+
+  .api-key__item {
+    &:hover,
+    > a:hover,
+    &:focus,
+    > a:focus {
+      background-color: var(--black4);
+      box-shadow: 0 0 0 0.4rem var(--black4);
+    }
+  }
+}
+
+.dark-mode .api-key__section {
+  background: var(--black9);
+
+  .api-key__item {
+    &:hover,
+    > a:hover,
+    &:focus,
+    > a:focus {
+      background-color: var(--black8);
+      box-shadow: 0 0 0 0.4rem var(--black8);
+    }
+  }
+}
+
+.api-key__item--class,
+.api-key__item--module {
+  flex-grow: 1;
+}
+
+.api-key__item {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.28s, box-shadow 0.28s;
+
+  > a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.28s, box-shadow 0.28s;
+  }
+}
+
+.api-key__item--has-children {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.api-key__section .api-key__item--has-children .api-key__section {
+  padding-left: 1.8rem;
+}
+
+.api-key__item > a::before {
+  content: 'P';
+  width: 2.4rem;
+  height: 2.4rem;
+  text-align: center;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: var(--info6);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.api-docs__section .api-docs__section {
+  margin-left: var(--space-32);
+}
+
+.api-docs__title {
+  font-family: var(--mono);
+  font-size: var(--font-size-code);
+  line-height: 2.4rem;
+  font-weight: 400;
+
+  &.api-key__item--module {
+    font-family: var(--sans);
+  }
+
+  &::before {
+    content: 'P';
+    font-family: var(--sans);
+    width: 2.4rem;
+    height: 2.4rem;
+    text-align: center;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--info6);
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+  }
+}
+
+.api-key__item--global > a::before,
+.api-docs__title--global::before {
+  content: 'G';
+  background-color: var(--warning4);
+}
+
+.api-key__item--event > a::before,
+.api-docs__title--event::before {
+  content: 'E';
+  background-color: var(--danger6);
+}
+
+.api-key__item--class > a::before,
+.api-docs__title--class::before {
+  content: 'C';
+  background-color: var(--warning4);
+}
+
+.api-key__item--method > a::before,
+.api-docs__title--method::before {
+  content: 'M';
+  background-color: var(--purple6);
+}
+
+.api-key__item--Object > a::before,
+.api-docs__title--Object::before {
+  content: 'O';
+  background-color: var(--pink6);
+}
+
+.api-key__item--module > a::before,
+.api-docs__title--module::before {
+  font-family: 'Material Icons';
+  content: 'pages';
+  background-color: transparent;
+  color: var(--color-text-accent);
+  font-size: 3rem;
+  vertical-align: middle;
+  position: relative;
+  right: 3px;
+}
+
+.api-key__item--misc {
+  display: none;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+}
+.breadcrumb-active {
+  color: var(--brand5);
+}

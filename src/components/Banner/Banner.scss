@@ -1,0 +1,29 @@
+.banner {
+  position: relative;
+  font-weight: bold;
+  background-color: var(--color-fill-top-banner);
+  font-size: var(--font-size-display2);
+  color: var(--color-text-primary);
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.bannerButton {
+  position: relative;
+  margin-right: var(--space-32);
+  border-radius: 5.6rem;
+  background: var(--purple5);
+  color: var(--color-fill-top-nav);
+  line-height: var(--line-height-subheading);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: var(--font-weight-semibold);
+  border: 1px solid transparent;
+}
+
+p {
+  padding-top: var(--space-08);
+  padding-bottom: var(--space-08);
+}

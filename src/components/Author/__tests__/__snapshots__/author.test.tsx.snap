@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author component does not render without a username 1`] = `<div />`;
+
+exports[`Author component renders correctly 1`] = `
+<div>
+  <li>
+    <a
+      class="link"
+      href="https://github.com/test-author"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="test-author"
+    >
+      <img
+        alt="test-author"
+        class="img"
+        src="https://github.com/test-author.png?size=60"
+      />
+    </a>
+  </li>
+</div>
+`;

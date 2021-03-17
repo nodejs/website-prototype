@@ -79,7 +79,7 @@ path.resolve('/etc', 'joe.txt') //'/etc/joe.txt'
 `path.normalize()` is another useful function, that will try and calculate the actual path, when it contains relative specifiers like `.` or `..`, or double slashes:
 
 ```js
-path.normalize('/users/joe/..//test.txt') ///users/test.txt
+path.normalize('/users/joe/..//test.txt') //'/users/test.txt'
 ```
 
-**Both resolve and normalize will not check if the path exists**. They just calculate a path based on the information they got.
+**Neither resolve nor normalize will check if the path exists**. They just calculate a path based on the information they got.

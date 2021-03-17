@@ -25,7 +25,7 @@ Another big difference is that in Node.js you control the environment. Unless yo
 
 This means that you can write all the modern ES6-7-8-9 JavaScript that your Node.js version supports.
 
-Since JavaScript moves so fast, but browsers can be a bit slow and users a bit slow to upgrade, sometimes on the web, you are stuck to use older JavaScript / ECMAScript releases.
+Since JavaScript moves so fast, but browsers can be a bit slow to upgrade, sometimes on the web you are stuck with using older JavaScript / ECMAScript releases.
 
 You can use Babel to transform your code to be ES5-compatible before shipping it to the browser, but in Node.js, you won't need that.
 

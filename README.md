@@ -1,14 +1,14 @@
 <p align="center">
   <br>
   <a href="https://nodejs.dev">
-    <img src="./src/images/nodejslogo.png" width="200"/>
+    <img src="./src/images/logos/nodejs-logo-light-mode.svg" width="200"/>
   </a>
 </p>
 
 <h1 align="center"><a href="https://nodejs.dev">Nodejs.dev</a></h1>
 
 <p align="center">
-  <a href="https://nodejs.dev">Nodejs.dev</a> site built using Gatsby.js with React.js, TypeScript, Emotion, and Remark.
+  <a href="https://nodejs.dev">Nodejs.dev</a> site built using Gatsby.js with React.js, TypeScript, SCSS, and Remark.
 </p>
 
 <p align="center">
@@ -22,88 +22,109 @@
   <br>
 </p>
 
-**You can find the latest [Figma design protype here](https://www.figma.com/proto/lOxAGGg5KXb6nwie7zXkz6/NJ---Design-System?node-id=1276%3A10492&viewport=-232%2C-1378%2C0.21998274326324463&scaling=min-zoom).**
+**You can find the latest [Figma design protype here](https://www.figma.com/file/lOxAGGg5KXb6nwie7zXkz6/NJ---Design-System?node-id=22%3A6086).**
 
 ## 🚀 Get Started
 
 1. **Install dependencies.**
 
-    ```sh
-    # install the dependencies
-    npm install
-    ```
+   ```bash
+   # install the dependencies
+   npm install
+   ```
 
 1. **Start developing.**
 
-    ```sh
-    # "start": "gatsby develop"
-    npm start
-    ```
+   ```bash
+   # "start": "gatsby develop"
+   npm start
+   ```
 
 1. **Open the source code and start editing!**
 
-    Your site is now running at `http://localhost:8000`!
+   Your site is now running at `http://localhost:8000`!
 
-    *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
+   *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
 
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+A quick look at some of the top-level files and directories found in this project.
 
 ```console
 .
+├── .github
+├── .storybook
+├── meetings
 ├── node_modules
 ├── src
+├── stories
+├── style-guide
+├── test
+├── util-node
+├── .editorconfig
+├── .eslintignore
+├── .eslintrc.js
+├── .firebaserc
 ├── .gitignore
 ├── .nvmrc
+├── .prettierignore
 ├── .prettierrc
+├── .remarkrc
+├── cloudbuild-deploy.yaml
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
 ├── empty.env
+├── firebase.json
 ├── gatsby-browser.js
 ├── gatsby-config.js
 ├── gatsby-node.js
-├── gatsby-ssr.js
 ├── LICENSE
+├── ModerationPolicy.md
+├── OKR.md
 ├── package-lock.json
 ├── package.json
 ├── README.md
-├── tsconfig.json
-├── tslint.json
-└── yarn.lock
+├── test-preprocessor.js
+├── test-setup.js
+└── tsconfig.json
+
 ```
 
-1. **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.
+1. **`.storybook`**: This directory contains configuration files so the [storybook]("https://storybook.js.org/) package works as it should. Storybook is used to build the individual UI components in this project.
 
-2. **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. "Src" is a convention for "source code."
+2. **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-3. **`.gitignore`**: This file tells git which files it should not track/not maintain a version history.
+3. **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. "Src" is a convention for "source code."
 
-4. **`.nvmrc`**: NVM configuration so packages work as they should
+4. **`/stories`**: This directory contains stories for UI components used in this project. You can find out what a story is [here]("https://storybook.js.org/docs/react/get-started/whats-a-story). Also, you can run them locally using `npm run storybook`.
 
-5. **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
+5. **`/test`**: Tests for this projects are stored in this directory. This project uses [Jest]("https://jestjs.io/) as it's testing framework.
 
-6. **`empty.env`**: Rename to **`.env`** and set your Contentful API key
+6. **`/util-node`**: Custom utility functions that require nodeJs to run can be stored in files inside this directory. An example is the create-slug function in the createSlug.js file that generates unique slugs for articles.
 
-7. **`gatsby-browser.tsx`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://next.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+7. **`.gitignore`**: This file tells git which files it should not track/not maintain a version history.
 
-6. **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you'd like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
+8. **`.nvmrc`**: nvm configuration so packages work as they should
 
-8. **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+9. **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
 
-9. **`gatsby-ssr.tsx`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://next.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+10. **`empty.env`**: Rename to **`.env`** and set your Contentful API key
 
-10. **`LICENSE`**: Gatsby is licensed under the MIT license.
+11. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-11. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won't change this file directly).
+12. **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you'd like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-12. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project's name, author, etc.). This manifest is how npm knows which packages to install for your project.
+13. **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-13. **`README.md`**: A text file containing useful reference information about your project.
+14. **`LICENSE`**: Gatsby is licensed under the MIT license.
 
-14. **`tsconfig.json`**: Config file for TypeScript
+15. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won't change this file directly).
 
-15. **`tslint.json`**: TS Lint configuration file
+16. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project's name, author, etc.). This manifest is how npm knows which packages to install for your project.
 
-16. **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm. This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+17. **`README.md`**: A text file containing useful reference information about your project.
+
+18. **`tsconfig.json`**: Config file for TypeScript
 
 ## 📝 Data Sources
 
@@ -137,24 +158,56 @@ Our current focus is on site development. Development is happening in the [nodej
 
 ### Team
 
-**[@nodejs/website-redesign](https://github.com/nodejs/website-redesign)**
-
 Any person who wants to contribute to the initiative is welcome! Please read
 [Contributing Guidelines][] and join the effort 🙌.
 
-Any member of the website-redesign initiative attached to the current phase of
-the project will be added to a future phase as the project moves forward.
+This repo is managed by the nodejs.dev. Members of the nodejs website team
+also have commiter rights on the repo.
 
-Any member of the website-redesign initiative who prefers to begin contributing
-at a specific future phase is welcome to make a PR adding their handle to that
-phase.
+#### The nodejs.dev team
 
-* [@amiller-gh](https://github.com/amiller-gh) - **Adam Miller**, CommComm
-  Co-champion
-* [@chowdhurian](https://github.com/chowdhurian) - **Manil Chowdhury**, CommComm
-  Co-champion
+<!-- ncu-team-sync.team(nodejs/nodejs-dev) -->
 
-#### Information Gathering
+* [@ahmadawais](https://github.com/ahmadawais) - Ahmad Awais ⚡️
+* [@alexandrtovmach](https://github.com/alexandrtovmach) - Alexandr Tovmach
+* [@amiller-gh](https://github.com/amiller-gh) - Adam Miller
+* [@argyleink](https://github.com/argyleink) - Adam Argyle
+* [@benhalverson](https://github.com/benhalverson) - Ben Halverson
+* [@BeniCheni](https://github.com/BeniCheni) - Benjamin Chen
+* [@codeekage](https://github.com/codeekage) - Abraham Jr. Agiri
+* [@darcyclarke](https://github.com/darcyclarke) - Darcy Clarke
+* [@designMoreWeb](https://github.com/designMoreWeb) - Divy Tolia
+* [@imbhargav5](https://github.com/imbhargav5) - Bhargav Ponnapalli
+* [@jemjam](https://github.com/jemjam) - j'em bones
+* [@joesepi](https://github.com/joesepi) - Joe Sepi
+* [@jonchurch](https://github.com/jonchurch) - Jonathan Church
+* [@kasicka](https://github.com/kasicka) - Zuzana Svetlíková
+* [@keywordnew](https://github.com/keywordnew) - Manil Chowdhury
+* [@LaRuaNa](https://github.com/LaRuaNa) - Onur Laru
+* [@maddhruv](https://github.com/maddhruv) - Dhruv Jain
+* [@marcustisater](https://github.com/marcustisater) - Marcus Tisäter
+* [@mbj36](https://github.com/mbj36) - Mohit kumar Bajoria
+* [@MylesBorins](https://github.com/MylesBorins) - Myles Borins
+* [@ogonzal87](https://github.com/ogonzal87) - Oscar Gonzalez
+* [@ollelauribostrom](https://github.com/ollelauribostrom) - Olle Lauri Boström
+* [@pierreneter](https://github.com/pierreneter) - Nguyễn J Huỳnh Long
+* [@sagirk](https://github.com/sagirk) - Sagir Khan
+* [@saulonunesdev](https://github.com/saulonunesdev) - Saulo Nunes
+* [@skllcrn](https://github.com/skllcrn) - Christopher
+* [@SMotaal](https://github.com/SMotaal) - Saleh Abdel Motaal
+* [@timothyis](https://github.com/timothyis) - Timothy
+* [@tstreamDOTh](https://github.com/tstreamDOTh) - T Thiyagaraj
+* [@ZYSzys](https://github.com/ZYSzys) - ZYSzys
+
+<!-- ncu-team-sync end -->
+
+#### The Website Redesign Teams
+
+This repo originated as "The Website Redesign" strategic initiative under
+the Node.js Community Community. Below are various teams and people that
+participated in that process.
+
+##### Information Gathering
 
 * [@amiller-gh](https://github.com/amiller-gh) - **Adam Miller**
 * [@codeekage](https://github.com/codeekage) - **Agiri Abraham JNR**
@@ -167,7 +220,7 @@ phase.
 * [@bnb](https://github.com/bnb) - **Tierney Cyren**
 * [@timothyis](https://github.com/timothyis) - **Timothy**
 
-#### IA / UX Planning
+##### IA / UX Planning
 
 * [@oe](https://github.com/oe) - **Olivia Hugger**
 * [@fhemberger](https://github.com/fhemberger) - **Frederic Hemberger**
@@ -187,7 +240,7 @@ phase.
 * [@milapbhojak](https://github.com/milapbhojak) - **Milap Bhojak**
 * [@devamaz](https://github.com/devamaz) - **Ahmad Abdul-Aziz**
 
-#### UI Design and Content Creation
+##### UI Design and Content Creation
 
 * [@amiller-gh](https://github.com/amiller-gh) - **Adam Miller**
 * [@bnb](https://github.com/bnb) - **Tierney Cyren**
@@ -201,7 +254,7 @@ phase.
 * [@AliObaji](https://github.com/AliObaji) - **Ali Obaji**
 * [@AhmadAwais](https://github.com/AhmadAwais) - **AhmadAwais**
 
-#### Site Development _<-- current phase_
+##### Site Development
 
 * [@abiclub23](https://github.com/abiclub23) - **Abhi Tondepu**
 * [@ajay2507](https://github.com/ajay2507) - **Ajaykumar**
@@ -243,4 +296,4 @@ phase.
 [code of conduct]: https://github.com/nodejs/admin/blob/master/CODE_OF_CONDUCT.md
 [contributing guidelines]: ./CONTRIBUTING.md
 [meeting notes]: ./meetings
-[query issues for "meeting"]: https://github.com/nodejs/website-redesign/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+Meeting+in%3Atitle
+[query issues for "meeting"]: https://github.com/nodejs/nodejs.dev/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+Meeting+in%3Atitle

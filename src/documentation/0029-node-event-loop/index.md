@@ -31,7 +31,7 @@ Almost all the I/O primitives in JavaScript are non-blocking. Network requests, 
 
 ## The call stack
 
-The call stack is a LIFO queue (Last In, First Out).
+The call stack is a LIFO (Last In, First Out) stack.
 
 The event loop continuously checks the **call stack** to see if there's any function that needs to run.
 
@@ -46,7 +46,7 @@ You know the error stack trace you might be familiar with, in the debugger or in
 Let's pick an example:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="A simple event loop explanation"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0029-01?path=server.js&previewSize=20&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0029-01 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -99,7 +99,7 @@ The use case of `setTimeout(() => {}, 0)` is to call a function, but execute it 
 Take this example:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Queuing function execution"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0029-02?path=server.js&previewSize=20&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0029-02 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -121,7 +121,7 @@ foo()
 
 This code prints, maybe surprisingly:
 
-```txt
+```bash
 foo
 baz
 bar
@@ -141,7 +141,7 @@ Why is this happening?
 
 ## The Message Queue
 
-When setTimeout() is called, the Browser or Node.js start the timer. Once the timer expires, in this case immediately as we put 0 as the timeout, the callback function is put in the **Message Queue**.
+When setTimeout() is called, the Browser or Node.js starts the timer. Once the timer expires, in this case immediately as we put 0 as the timeout, the callback function is put in the **Message Queue**.
 
 The Message Queue is also where user-initiated events like click or keyboard events, or fetch responses are queued before your code has the opportunity to react to them. Or also DOM events like `onLoad`.
 
@@ -160,7 +160,7 @@ I find nice the analogy of a rollercoaster ride at an amusement park: the messag
 Example:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="ECMAScript 2015 Job Queue"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0029-03?path=server.js&previewSize=35&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0029-03 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -193,3 +193,7 @@ bar
 ```-->
 
 That's a big difference between Promises (and Async/await, which is built on promises) and plain old asynchronous functions through `setTimeout()` or other platform APIs.
+
+Finally, here's what the call stack looks like for the example above:
+
+![Call stack third example](call-stack-third-example.svg)

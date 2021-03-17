@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Header component renders correctly 1`] = `
+<div>
+  <div
+    class="banner"
+  >
+    <p>
+      <a
+        href="https://nodejs.org/en/blog/vulnerability/february-2020-security-releases/"
+      >
+        <button
+          class="bannerButton"
+          type="button"
+        >
+          Blog post
+        </button>
+      </a>
+      New security releases now available for all release lines
+    </p>
+  </div>
+</div>
+`;

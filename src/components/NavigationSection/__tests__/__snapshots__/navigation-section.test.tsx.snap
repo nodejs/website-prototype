@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationSection component renders correctly 1`] = `
+<div>
+  <ul
+    class="side-nav__list"
+  >
+    <h2
+      class="t-body2 side-nav__title"
+    >
+      <i
+        class="material-icons"
+      >
+        offline_bolt
+      </i>
+      Introduction
+    </h2>
+    <a
+      class="t-body2 side-nav__item"
+      href="/learn/intro"
+      id="link-intro"
+    >
+      Section 1
+    </a>
+  </ul>
+</div>
+`;

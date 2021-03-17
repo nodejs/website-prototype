@@ -17,21 +17,21 @@ For example, in the traditional way, when you tell the program to read a file, t
 
 Using streams you read it piece by piece, processing its content without keeping it all in memory.
 
-The Node.js [`stream` module](https://nodejs.org/api/stream.html) provides the foundation upon which all streaming APIs are build.
+The Node.js [`stream` module](https://nodejs.org/api/stream.html) provides the foundation upon which all streaming APIs are built.
 All streams are instances of [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
 
 ## Why streams
 
-Streams basically provide two major advantages using other data handling methods:
+Streams basically provide two major advantages over using other data handling methods:
 
 * **Memory efficiency**: you don't need to load large amounts of data in memory before you are able to process it
-* **Time efficiency**: it takes way less time to start processing data as soon as you have it, rather than waiting till the whole data payload is available to start
+* **Time efficiency**: it takes way less time to start processing data, since you can start processing as soon as you have it, rather than waiting till the whole data payload is available
 
 ## An example of a stream
 
-A typical example is the one of reading files from a disk.
+A typical example is reading files from a disk.
 
-Using the Node.js `fs` module you can read a file, and serve it over HTTP when a new connection is established to your http server:
+Using the Node.js `fs` module, you can read a file, and serve it over HTTP when a new connection is established to your HTTP server:
 
 ```js
 const http = require('http')
@@ -231,4 +231,30 @@ readableStream.push('hi!')
 readableStream.push('ho!')
 
 writableStream.end()
+```
+
+## How to create a transform stream
+
+We get the Transform stream from the [`stream` module](https://nodejs.org/api/stream.html), and we initialize it and implement the `transform._transform()` method.
+
+First create a transform stream object:
+
+```js
+const { Transform } = require('stream')
+const TransformStream = new Transform;
+```
+
+then implement `_transform`:
+
+```js
+TransformStream._transform = (chunk, encoding, callback) => {
+  console.log(chunk.toString().toUpperCase());
+  callback();
+}
+```
+
+Pipe readable stream:
+
+```js
+process.stdin.pipe(TransformStream);
 ```

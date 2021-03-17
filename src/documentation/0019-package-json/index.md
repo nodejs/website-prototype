@@ -114,8 +114,8 @@ Here's a much more complex example, which was extracted from a sample Vue.js app
 
 there are _lots_ of things going on here:
 
-* `name` sets the application/package name
 * `version` indicates the current version
+* `name` sets the application/package name
 * `description` is a brief description of the app/package
 * `main` set the entry point for the application
 * `private` if set to `true` prevents the app/package to be accidentally published on `npm`
@@ -364,7 +364,7 @@ Sets a list of `npm` packages installed as dependencies.
 
 When you install a package using npm or yarn:
 
-```sh
+```bash
 npm install <PACKAGENAME>
 yarn add <PACKAGENAME>
 ```
@@ -387,8 +387,8 @@ They differ from `dependencies` because they are meant to be installed only on a
 
 When you install a package using npm or yarn:
 
-```sh
-npm install --dev <PACKAGENAME>
+```bash
+npm install --save-dev <PACKAGENAME>
 yarn add --dev <PACKAGENAME>
 ```
 
@@ -447,19 +447,6 @@ You have seen in the description above version numbers like these: `~3.0.0` or `
 
 That symbol specifies which updates your package accepts, from that dependency.
 
-Given that using semver (semantic versioning) all versions have 3 digits, the first being the major release, the second the minor release and the third is the patch release, you have these rules:
+Given that using semver (semantic versioning) all versions have 3 digits, the first being the major release, the second the minor release and the third is the patch release, you have these "[Rules](https://nodejs.dev/learn/semantic-versioning-using-npm/)".
 
-* `~`: if you write `~0.13.0`, you want to only update patch releases: `0.13.1` is ok, but `0.14.0` is not.
-* `^`: if you write `^0.13.0`, you want to update patch and minor releases: `0.13.1`, `0.14.0` and so on.
-* `*`: if you write `*`, that means you accept all updates, including major version upgrades.
-* `>`: you accept any version higher than the one you specify
-* `>=`: you accept any version equal to or higher than the one you specify
-* `<=`: you accept any version equal or lower to the one you specify
-* `<`: you accept any version lower to the one you specify
-
-There are other rules, too:
-
-* no symbol: you accept only that specific version you specify
-* `latest`: you want to use the latest version available
-
-and you can combine most of the above in ranges, like this: `1.0.0 || >=1.1.0 <1.2.0`, to either use 1.0.0 or one release from 1.1.0 up, but lower than 1.2.0.
+You can combine most of the versions in ranges, like this: `1.0.0 || >=1.1.0 <1.2.0`, to either use 1.0.0 or one release from 1.1.0 up, but lower than 1.2.0.

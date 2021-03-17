@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Footer component renders correctly 1`] = `
+<div>
+  <section
+    class="get-started-section"
+  >
+    <div
+      class="cta-container"
+    >
+      <div
+        class="cta"
+      >
+        <img
+          alt=""
+          class="image"
+          src="test-file-stub"
+        />
+        <h2
+          class="header"
+        >
+          Mock Text
+        </h2>
+        <p
+          class="body-text"
+        >
+          Mock Text
+        </p>
+      </div>
+      <div
+        class="cta"
+      >
+        <img
+          alt=""
+          class="image"
+          src="test-file-stub"
+        />
+        <h2
+          class="header"
+        >
+          Mock Text
+        </h2>
+        <p
+          class="body-text"
+        >
+          Mock Text
+        </p>
+      </div>
+    </div>
+    <a
+      class="btn circular-container"
+      href="/learn"
+    >
+      Mock Text
+    </a>
+  </section>
+</div>
+`;

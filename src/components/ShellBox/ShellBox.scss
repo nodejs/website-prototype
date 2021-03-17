@@ -1,0 +1,62 @@
+.shell-box {
+  font-family: var(--mono);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black9);
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  padding: 0 0 var(--space-24) var(--space-16);
+
+  code {
+    overflow-x: hidden;
+    font-family: inherit;
+    color: var(--pink5);
+    width: calc(100% - 20px);
+    line-height: 30px;
+
+    &:hover {
+      overflow-x: auto;
+    }
+
+    > span.install__text__command {
+      color: var(--black0);
+    }
+
+    > span.function {
+      color: var(--warning5);
+    }
+  }
+
+  .shell-box-top {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: var(--space-08);
+
+    span,
+    button {
+      width: 86px;
+      height: 23px;
+      font-size: var(--font-size-code);
+      display: inherit;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      margin-left: 1.6rem;
+      color: var(--black9);
+      background-color: var(--black3);
+      border-radius: 0 0 0.3rem 0.3rem;
+    }
+
+    button {
+      border-width: 0;
+      border-radius: 0 0.3rem 0.3rem 0.3rem;
+      background-color: var(--brand2);
+      i {
+        padding: 0;
+      }
+    }
+  }
+}

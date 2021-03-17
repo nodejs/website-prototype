@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SEO component renders correctly 1`] = `<div />`;
+
+exports[`SEO component uses config properties as fallback for missing props 1`] = `<div />`;

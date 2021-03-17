@@ -1,0 +1,26 @@
+.edit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--black7) !important;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-family: var(--sans-serif);
+  vertical-align: middle;
+  span {
+    vertical-align: middle;
+    font-weight: normal;
+  }
+  &:hover {
+    color: var(--brand-light) !important;
+  }
+}
+
+.icon {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}

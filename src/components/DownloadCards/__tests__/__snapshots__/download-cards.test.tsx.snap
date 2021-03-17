@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadCards component renders correctly 1`] = `
+<div>
+  <ul
+    class="download-cards"
+    role="tablist"
+    tabindex="0"
+  >
+    <li
+      class="download-card download-card--active"
+      role="presentation"
+    >
+      <div
+        class="download-card__top"
+      >
+        <img
+          alt="Windows Installer logo"
+          class="download-card__image"
+          src="test-file-stub"
+        />
+        <a
+          class="download-card__link"
+          href="https://nodejs.org/dist/undefined/node-undefined-x86.msi"
+        >
+          <i
+            class="material-icons"
+          >
+            get_app
+          </i>
+        </a>
+      </div>
+      <p
+        class="download-card__label"
+      >
+        Windows Installer
+      </p>
+      <p
+        class="download-card__filename"
+      >
+        node-undefined-x86.msi
+      </p>
+    </li>
+    <li
+      class="download-card"
+      role="presentation"
+    >
+      <div
+        class="download-card__top"
+      >
+        <img
+          alt="MAC Installer logo"
+          class="download-card__image"
+          src="test-file-stub"
+        />
+      </div>
+      <p
+        class="download-card__label"
+      >
+        MAC Installer
+      </p>
+      <p
+        class="download-card__filename"
+      >
+        node-undefined.pkg
+      </p>
+    </li>
+    <li
+      class="download-card"
+      role="presentation"
+    >
+      <div
+        class="download-card__top"
+      >
+        <img
+          alt="Source Code logo"
+          class="download-card__image"
+          src="test-file-stub"
+        />
+      </div>
+      <p
+        class="download-card__label"
+      >
+        Source Code
+      </p>
+      <p
+        class="download-card__filename"
+      >
+        node-undefined.tar.gz
+      </p>
+    </li>
+  </ul>
+</div>
+`;

@@ -55,7 +55,7 @@ console.log('%o', Number)
 Take this code:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Output to the command line using Node.js"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0013-02?path=server.js&previewSize=40&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0013-02 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -78,7 +78,7 @@ console.count(
 ```
 -->
 
-What happens is that count will count the number of times a string is printed, and print the count next to it:
+What happens is that `console.count()` will count the number of times a string is printed, and print the count next to it:
 
 You can just count apples and oranges:
 
@@ -107,7 +107,7 @@ function1()
 
 This will print the stack trace. This is what's printed if we try this in the Node.js REPL:
 
-```txt
+```bash
 Trace
     at function2 (repl:1:33)
     at function1 (repl:1:25)

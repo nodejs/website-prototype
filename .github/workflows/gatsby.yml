@@ -1,14 +1,14 @@
 name: Gastby build
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  build:
+  test-ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/cache@v1
+      - uses: actions/cache@v2.1.4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -19,5 +19,5 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Run Gatsby Build
-        run: npm run build
+      - name: Run test and coverage
+        run: npm run build-ci

@@ -7,13 +7,13 @@ section: Getting Started
 
 You can install an old version of an npm package using the `@` syntax:
 
-```sh
+```bash
 npm install <package>@<version>
 ```
 
 Example:
 
-```sh
+```bash
 npm install cowsay
 ```
 
@@ -21,19 +21,19 @@ installs version 1.3.1 (at the time of writing).
 
 Install version 1.2.0 with:
 
-```sh
+```bash
 npm install cowsay@1.2.0
 ```
 
 The same can be done with global packages:
 
-```sh
+```bash
 npm install -g webpack@4.16.4
 ```
 
-You might also be interested in listing all the previous version of a package. You can do it with `npm view <package> versions`:
+You might also be interested in listing all the previous versions of a package. You can do it with `npm view <package> versions`:
 
-```txt
+```bash
 ❯ npm view cowsay versions
 
 [ '1.0.0',

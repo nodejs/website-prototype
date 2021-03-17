@@ -13,11 +13,14 @@
 # to grant publishing access to Cloud Build.)
 
 steps:
-- name: 'node:10'
-  entrypoint: npm
-  args: ['ci']
-- name: 'node:10'
-  entrypoint: npm
-  args: ['run', 'build']
-- name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy', "--project", "$PROJECT_ID", "--only", "hosting"]
+  - name: 'node:12'
+    entrypoint: npm
+    args: ['ci']
+  - name: 'node:12'
+    entrypoint: npm
+    args: ['run', 'build']
+  - name: 'node:12'
+    entrypoint: npm
+    args: ['run', 'build-storybook']
+  - name: 'gcr.io/$PROJECT_ID/firebase'
+    args: ['deploy', '--project', '$PROJECT_ID', '--only', 'hosting']

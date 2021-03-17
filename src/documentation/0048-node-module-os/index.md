@@ -176,3 +176,5 @@ Identifies the operating system:
 Returns the number of seconds the computer has been running since it was last rebooted.
 
 ## `os.userInfo()`
+
+Returns an object that contains the current `username`, `uid`, `gid`, `shell`, and `homedir`

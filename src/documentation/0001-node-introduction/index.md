@@ -28,7 +28,7 @@ npm with its simple structure helped the ecosystem of Node.js proliferate, and n
 The most common example Hello World of Node.js is a web server:
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Hello world web server"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0001-01?path=server.js&previewSize=30&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0001-01 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -96,14 +96,18 @@ Node.js is a low-level platform. In order to make things easy and exciting for d
 Many of those established over time as popular options. Here is a non-comprehensive list of the ones worth learning:
 
 * [**AdonisJs**](https://adonisjs.com/): A full-stack framework highly focused on developer ergonomics, stability, and confidence. Adonis is one of the fastest Node.js web frameworks.
+* [**Egg.js**](https://eggjs.org/en/): A framework to build better enterprise frameworks and apps with Node.js & Koa.
 * [**Express**](https://expressjs.com/): It provides one of the most simple yet powerful ways to create a web server. Its minimalist approach, unopinionated, focused on the core features of a server, is key to its success.
 * [**Fastify**](https://fastify.io/): A web framework highly focused on providing the best developer experience with the least overhead and a powerful plugin architecture. Fastify is one of the fastest Node.js web frameworks.
+* [**Gatsby**](https://www.gatsbyjs.com/): A [React](https://reactjs.org/)-based, [GraphQL](https://graphql.org/) powered, static site generator with a very rich ecosystem of plugins and starters.
 * [**hapi**](https://hapijs.com): A rich framework for building applications and services that enables developers to focus on writing reusable application logic instead of spending time building infrastructure.
 * [**koa**](http://koajs.com/): It is built by the same team behind Express, aims to be even simpler and smaller, building on top of years of knowledge. The new project born out of the need to create incompatible changes without disrupting the existing community.
 * [**Loopback.io**](https://loopback.io/): Makes it easy to build modern applications that require complex integrations.
 * [**Meteor**](https://meteor.com): An incredibly powerful full-stack framework, powering you with an isomorphic approach to building apps with JavaScript, sharing code on the client and the server. Once an off-the-shelf tool that provided everything, now integrates with frontend libs [React](https://reactjs.org/), [Vue](https://vuejs.org/), and [Angular](https://angular.io). Can be used to create mobile apps as well.
 * [**Micro**](https://github.com/zeit/micro): It provides a very lightweight server to create asynchronous HTTP microservices.
 * [**NestJS**](https://nestjs.com/): A TypeScript based progressive Node.js framework for building enterprise-grade efficient, reliable and scalable server-side applications.
-* [**Next.js**](https://nextjs.org/): A framework to render server-side rendered [React](https://reactjs.org/) applications.
-* [**Nx**](https://nx.dev/): It powers the Angular CLI which allows building full-stack applications using NestJS, Express, and [Angular](https://angular.io) and easily share code between backends and frontends.
+* [**Next.js**](https://nextjs.org/): [React](https://reactjs.org) framework that gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
+* [**Nx**](https://nx.dev/): A toolkit for full-stack monorepo development using NestJS, Express, [React](https://reactjs.org/), [Angular](https://angular.io), and more! Nx helps scale your development from one team building one application to many teams collaborating on multiple applications!
+* [**Sapper**](https://sapper.svelte.dev/): Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing. Offers SSR and more!
 * [**Socket.io**](https://socket.io/): A real-time communication engine to build network applications.
+* [**Strapi**](https://strapi.io/): Strapi is a flexible, open-source Headless CMS that gives developers the freedom to choose their favorite tools and frameworks while also allowing editors to easily manage and distribute their content. By making the admin panel and API extensible through a plugin system, Strapi enables the world's largest companies to accelerate content delivery while building beautiful digital experiences.

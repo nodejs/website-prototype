@@ -1,0 +1,113 @@
+.home-page-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--space-96) 0 var(--space-128) 0;
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 840px;
+  }
+
+  .sub-title {
+    max-width: 780px;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-light);
+    margin: var(--space-32) 0 var(--space-32) 0;
+  }
+}
+
+.btn-ctas {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.download-lts-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  & > p {
+    margin-top: var(--space-08);
+  }
+}
+
+.circular-container,
+.circular-container:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 20rem;
+  height: 5.6rem;
+  padding: 1.4rem 0;
+  border-radius: 5rem;
+  color: var(--black0);
+  margin: 0 var(--space-16);
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--brand6);
+  transition: background-color 0.2s ease-out;
+
+  &:hover {
+    color: var(--black0);
+    background-color: var(--brand7);
+  }
+
+  &.inverse {
+    background-color: transparent;
+    border: var(--brand6) var(--space-02) solid;
+    transition: background-color 0.2s ease-out;
+  }
+
+  &.inverse:hover {
+    background-color: var(--brand7);
+    border: var(--brand7) var(--space-02) solid;
+  }
+
+  .dark-mode &.inverse {
+    color: var(--black0);
+  }
+
+  .light-mode &.inverse {
+    color: var(--brand6);
+  }
+
+  .light-mode &.inverse:hover {
+    color: var(--black0);
+  }
+}
+
+@media (max-width: 800px) {
+  .home-page-hero {
+    padding: var(--space-96) 0 var(--space-96) 0;
+    h1 {
+      font-size: var(--font-size-display2);
+      max-width: 90vw;
+      line-height: 48px;
+    }
+
+    .sub-title {
+      max-width: 90vw;
+    }
+
+    .btn-ctas {
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .download-lts-container {
+    margin-bottom: var(--space-20);
+  }
+}

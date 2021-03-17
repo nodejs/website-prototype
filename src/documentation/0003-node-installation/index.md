@@ -11,9 +11,9 @@ Official packages for all the major platforms are available at <https://nodejs.o
 
 One very convenient way to install Node.js is through a package manager. In this case, every operating system has its own.
 
-On macOS, [Homebrew](https://brew.sh/) is the de-facto standard, and - once installed - allows to install Node.js very easily, by running this command in the CLI:
+On macOS, [Homebrew](https://brew.sh/) is the de-facto standard, and - once installed - allows you to install Node.js very easily, by running this command in the CLI:
 
-```sh
+```bash
 brew install node
 ```
 
@@ -23,7 +23,7 @@ Other package managers for Linux and Windows are listed in <https://nodejs.org/e
 
 It is also very useful to test your code with old Node.js versions.
 
-See <https://github.com/creationix/nvm> for more information about this option.
+See <https://github.com/nvm-sh/nvm> for more information about this option.
 
 My suggestion is to use the official installer if you are just starting out and you don't use Homebrew already, otherwise, Homebrew is my favorite solution.
 

@@ -1,0 +1,34 @@
+.download-page__navigation {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-overline);
+  line-height: var(--line-height-overline);
+  letter-spacing: var(--space-02);
+  width: 100%;
+}
+
+.download-page__navigation--active {
+  color: var(--brand4);
+}
+
+.download-page__navigation--title {
+  text-transform: capitalize;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-display3);
+  line-height: var(--line-height-display3);
+}
+
+.download-page__navigation--npm {
+  text-transform: lowercase;
+  width: 100%;
+  text-align: right;
+}
+
+@media (max-width: 500px) {
+  .download-page__navigation--title {
+    font-size: var(--font-size-display5);
+    line-height: var(--line-height-display5);
+  }
+}

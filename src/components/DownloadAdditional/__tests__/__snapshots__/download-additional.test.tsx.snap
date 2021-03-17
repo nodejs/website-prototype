@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadAdditional component renders correctly 1`] = `
+<div>
+  <div
+    class="download-additional"
+  >
+    <div
+      class="download-additional__header"
+    >
+      <h3
+        class="download-additional__title"
+      >
+        Additional Downloads
+      </h3>
+      <div
+        class="download-toogle"
+      >
+        <div
+          class="download-toogle__selector"
+        >
+          <div
+            class="download-toogle__switch"
+          >
+            <button
+              aria-checked="true"
+              aria-label="Show LTS versions"
+              class="download-toogle__button -active"
+              role="switch"
+              type="button"
+            >
+              LTS
+            </button>
+            <button
+              aria-checked="true"
+              aria-label="Show LTS versions"
+              class="download-toogle__button -current"
+              role="switch"
+              type="button"
+            >
+              Current
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="download-additional__body"
+    />
+  </div>
+</div>
+`;

@@ -43,11 +43,11 @@ and this is an extract of `package-lock.json`, where we removed the nested depen
 }
 ```
 
-Now those 2 files tell us that we installed version `1.3.1` of cowsay, and our rule for updates is `^1.3.1`, which for the npm versioning rules means that npm can update to patch and minor releases: `1.13.1`, `1.14.0` and so on.
+Now those 2 files tell us that we installed version `1.3.1` of cowsay, and our rule for updates is `^1.3.1`, which for the npm versioning rules means that npm can update to patch and minor releases: `1.3.2`, `1.4.0` and so on.
 
 If there is a new minor or patch release and we type `npm update`, the installed version is updated, and the `package-lock.json` file diligently filled with the new version.
 
-`package.json` remains unchanged.
+Since npm version 5.0.0, `npm update` will update the `package.json` with the updated version. Use `npm update --no-save` to not update `package.json`.
 
 To discover new releases of the packages, you run `npm outdated`.
 
@@ -55,17 +55,17 @@ Here's the list of a few outdated packages in one repository that wasn't updated
 
 ![](outdated-packages.png)
 
-Some of those updates are major releases. Running `npm update` won't update the version of those. Major releases are never updated in this way because they (by definition) introduce breaking changes, and `npm` want to save you trouble.
+Some of those updates are major releases. Running `npm update` won't update the version of those. Major releases are never updated in this way because they (by definition) introduce breaking changes, and `npm` wants to save you trouble.
 
-To update to a new major version all the packages, install the `npm-check-updates` package globally:
+To update all packages to a new major version, install the `npm-check-updates` package globally:
 
-```sh
+```bash
 npm install -g npm-check-updates
 ```
 
 then run it:
 
-```sh
+```bash
 ncu -u
 ```
 
@@ -73,12 +73,12 @@ this will upgrade all the version hints in the `package.json` file, to `dependen
 
 You are now ready to run the update:
 
-```sh
+```bash
 npm update
 ```
 
 If you just downloaded the project without the `node_modules` dependencies and you want to install the shiny new versions first, just run
 
-```sh
+```bash
 npm install
 ```

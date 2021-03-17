@@ -8,7 +8,7 @@ section: Getting Started
 ## Introduction to promises
 
 <iframe
-  allow="geolocation; microphone; camera; midi; encrypted-media"
+  title="Introduction to promises"
   src="https://glitch.com/embed/#!/embed/nodejs-dev-0034-01?path=server.js&previewSize=35&attributionHidden=true&sidebarCollapsed=true"
   alt="nodejs-dev-0034-01 on Glitch"
   style="height: 400px; width: 100%; border: 0;">
@@ -58,7 +58,7 @@ const isItDoneYet = new Promise((resolve, reject) => {
 })
 ```
 
-As you can see, the promise checks the `done` global constant, and if that's true, the promise goes to a **resolved** state (since the `resolve` callback was called); otherwise, the `reject` callback is executed, putting the promise in a rejected state. (If one of these functions is never called in the execution path, the promise will remain in a pending state)
+As you can see, the promise checks the `done` global constant, and if that's true, the promise goes to a **resolved** state (since the `resolve` callback was called); otherwise, the `reject` callback is executed, putting the promise in a rejected state. (If none of these functions is called in the execution path, the promise will remain in a pending state)
 
 Using `resolve` and `reject`, we can communicate back to the caller what the resulting promise state was, and what to do with it. In the above case we just returned a string, but it could be an object, or `null` as well. Because we've created the promise in the above snippet, it has **already started executing**. This is important to understand what's going on in the section [Consuming a promise](#consuming-a-promise) below.
 
@@ -71,7 +71,7 @@ const getFile = (fileName) => {
   return new Promise((resolve, reject) => {
     fs.readFile(fileName, (err, data) => {
       if (err) {
-        reject (err)  // calling `reject` will cause the promise to fail with or without the error passed as an argument
+        reject(err)  // calling `reject` will cause the promise to fail with or without the error passed as an argument
         return        // and we don't want to go any further
       }
       resolve(data)
@@ -117,7 +117,7 @@ Running `checkIfItsDone()` will specify functions to execute when the `isItDoneY
 
 A promise can be returned to another promise, creating a chain of promises.
 
-A great example of chaining promises is given by the Fetch API, a layer on top of the XMLHttpRequest API, which we can use to get a resource and queue a chain of promises to execute when the resource is fetched.
+A great example of chaining promises is the Fetch API, which we can use to get a resource and queue a chain of promises to execute when the resource is fetched.
 
 The Fetch API is a promise-based mechanism, and calling `fetch()` is equivalent to defining our own promise using `new Promise()`.
 

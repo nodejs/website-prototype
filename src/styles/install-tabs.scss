@@ -1,0 +1,106 @@
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+
+  &__tab-list {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+  }
+
+  &__tab {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 10px 12px;
+    background: var(--black8);
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+
+    &--selected {
+      background: var(--black9);
+      color: #fff;
+      border-radius: 5px 5px 0 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px hsl(208, 99%, 50%);
+      border-color: hsl(208, 99%, 50%);
+      outline: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 5px;
+        left: -4px;
+        right: -4px;
+        bottom: -5px;
+        background: var(--black0);
+      }
+    }
+  }
+
+  &__tab-panel {
+    display: none;
+    padding: 20px;
+
+    &--selected {
+      display: block;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-top: var(--space-08);
+  }
+
+  h2 {
+    margin: var(--space-16) 0;
+  }
+
+  .install {
+    &__header {
+      height: 30px;
+      margin: 0 5px;
+      &-circles {
+        height: 100%;
+        float: left;
+      }
+      &-grey-circle {
+        display: inline-block;
+        background-color: var(--black8);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 10px 5px;
+      }
+      &-text {
+        width: calc(100% - 60px);
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+    &__text {
+      color: var(--pink6);
+      padding-left: 6px;
+    }
+    &__docs-button {
+      border-radius: var(--space-04);
+      padding: var(--space-08) var(--space-16);
+      margin-top: var(--space-20);
+    }
+    &__docs-button-text,
+    &__docs-button-text:hover {
+      text-decoration: none;
+      box-sizing: border-box;
+      width: 17rem;
+      height: 4rem;
+      color: var(--black6);
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+}

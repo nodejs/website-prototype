@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component only renders links to pages that has a title 1`] = `
+<div>
+  <ul
+    class="pagination"
+  >
+    <li>
+      <a
+        class="link"
+        href="/learn/test-slug"
+        rel="prev"
+      >
+        ←   Prev
+      </a>
+    </li>
+    <li />
+  </ul>
+</div>
+`;
+
+exports[`Pagination component renders correctly when there is no next page 1`] = `
+<div>
+  <ul
+    class="pagination"
+  >
+    <li>
+      <a
+        class="link"
+        href="/learn/test-slug"
+        rel="prev"
+      >
+        ←   Prev
+      </a>
+    </li>
+    <li />
+  </ul>
+</div>
+`;
+
+exports[`Pagination component renders correctly when there is no previous page 1`] = `
+<div>
+  <ul
+    class="pagination"
+  >
+    <li />
+    <li>
+      <a
+        class="link"
+        href="/learn/test-slug"
+        rel="next"
+      >
+        Next   →
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Pagination component renders links to the next and previous page 1`] = `
+<div>
+  <ul
+    class="pagination"
+  >
+    <li>
+      <a
+        class="link"
+        href="/learn/test-slug"
+        rel="prev"
+      >
+        ←   Prev
+      </a>
+    </li>
+    <li>
+      <a
+        class="link"
+        href="/learn/test-slug"
+        rel="next"
+      >
+        Next   →
+      </a>
+    </li>
+  </ul>
+</div>
+`;

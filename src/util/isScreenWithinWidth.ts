@@ -2,9 +2,9 @@
  *  If the width of the viewport is lesser than this value
  *  it means that the website is viewed in a tablet or mobile
  */
-const MAX_SMALL_SCREEN_WIDTH: number = 1262;
+const MAX_SMALL_SCREEN_WIDTH = 1262;
 
-const MAX_MOBILE_SCREEN_WIDTH: number = 720;
+const MAX_MOBILE_SCREEN_WIDTH = 720;
 
 const isScreenWithinWidth = (maxWidth: number): boolean => {
   // Get viewport width
@@ -17,7 +17,8 @@ const isScreenWithinWidth = (maxWidth: number): boolean => {
   return w <= maxWidth;
 };
 
-export const isSmallScreen = () => isScreenWithinWidth(MAX_SMALL_SCREEN_WIDTH);
+export const isSmallScreen = (): boolean =>
+  isScreenWithinWidth(MAX_SMALL_SCREEN_WIDTH);
 
-export const isMobileScreen = () =>
+export const isMobileScreen = (): boolean =>
   isScreenWithinWidth(MAX_MOBILE_SCREEN_WIDTH);

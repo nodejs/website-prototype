@@ -1,0 +1,110 @@
+.install {
+  .react-tabs {
+    -webkit-tap-highlight-color: transparent;
+
+    &__tab-list {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+    }
+
+    &__tab {
+      display: inline-block;
+      border: 1px solid transparent;
+      border-bottom: none;
+      bottom: -1px;
+      color: var(--black4);
+      position: relative;
+      list-style: none;
+      padding: 10px 12px;
+      background: var(--black8);
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+
+      &--selected {
+        background: var(--black9);
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+      }
+
+      &:focus {
+        box-shadow: 0 0 5px var(--pink5);
+        border-color: var(--pink5);
+        border-bottom: none;
+        outline: none;
+
+        &:after {
+          content: '';
+          position: absolute;
+          height: 5px;
+          left: 0;
+          right: 0;
+          bottom: -5px;
+          background: var(--black9);
+        }
+      }
+    }
+
+    &__tab-panel {
+      display: none;
+      padding: 20px;
+
+      &--selected {
+        display: block;
+      }
+    }
+  }
+  &__header {
+    height: 30px;
+    margin: 0 5px;
+    font-weight: var(--font-weight-semibold);
+    &-circles {
+      height: 100%;
+      float: left;
+    }
+    &-grey-circle {
+      display: inline-block;
+      background-color: var(--black8);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 10px 5px;
+    }
+    &-text {
+      width: calc(100% - 60px);
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+  &__text {
+    color: var(--pink5);
+    &__line {
+      margin: var(--space-12) 0;
+    }
+    &__no-select {
+      margin-right: var(--space-12);
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none;
+    }
+  }
+  &__docs-button,
+  &__docs-button:hover {
+    border-radius: var(--space-04);
+    border: 1px solid var(--black3);
+    padding: var(--space-08) var(--space-16);
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 4rem;
+    color: var(--black3);
+    font-weight: var(--font-weight-semibold);
+  }
+}

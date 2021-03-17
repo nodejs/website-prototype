@@ -1,0 +1,29 @@
+.home-page.-download {
+  margin-top: 151px;
+  max-width: 936px;
+  width: 80%;
+  font-family: var(--base-type-face);
+  font-style: var(--font-style-regular);
+  font-weight: var(--font-weight-regular);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.release-description {
+  margin-top: 40px;
+  font-size: var(--font-size-body1);
+  line-height: var(--line-height-body1);
+  text-align: center;
+}
+
+@media (max-width: 975px) {
+  .home-page.-download {
+    width: 90%;
+  }
+
+  .release-description {
+    text-align: justify;
+  }
+}

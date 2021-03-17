@@ -9,7 +9,7 @@ In version 5, npm introduced the `package-lock.json` file.
 
 What's that? You probably know about the `package.json` file, which is much more common and has been around for much longer.
 
-The goal of the file is to keep track of the exact version of every package that is installed so that a product is 100% reproducible in the same way even if packages are updated by their maintainers.
+The goal of `package-lock.json` file is to keep track of the exact version of every package that is installed so that a product is 100% reproducible in the same way even if packages are updated by their maintainers.
 
 This solves a very specific problem that `package.json` left unsolved. In package.json you can set which versions you want to upgrade to (patch or minor), using the **semver** notation, for example:
 

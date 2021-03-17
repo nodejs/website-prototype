@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReleaseToggle component renders correctly when selected is false 1`] = `
+<div>
+  <label
+    for="release-selector-100000"
+  >
+    <input
+      id="release-selector-100000"
+      type="checkbox"
+    />
+    current
+  </label>
+</div>
+`;
+
+exports[`ReleaseToggle component renders correctly when selected is true 1`] = `
+<div>
+  <label
+    for="release-selector-100000"
+  >
+    <input
+      checked=""
+      id="release-selector-100000"
+      type="checkbox"
+    />
+    lts
+  </label>
+</div>
+`;

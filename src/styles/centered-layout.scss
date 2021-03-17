@@ -1,0 +1,16 @@
+.main__centered {
+  max-width: 936px;
+  width: 80%;
+  font-family: var(--base-type-face);
+  font-style: var(--font-style-regular);
+  font-weight: var(--font-weight-regular);
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 100px auto;
+}
+
+@media (max-width: 975px) {
+  .main__centered {
+    width: 90%;
+  }
+}

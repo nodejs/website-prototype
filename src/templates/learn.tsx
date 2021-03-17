@@ -1,17 +1,19 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import Article from '../components/article';
-import Hero from '../components/hero';
-import Layout from '../components/layout';
-import Navigation from '../components/navigation';
+import Article from '../components/Article';
+import Layout from '../components/Layout';
+import Navigation from '../containers/Navigation';
 import { LearnPageContext, LearnPageData } from '../types';
 
-type Props = {
+import '../styles/article-reader.scss';
+import '../styles/learn.scss';
+import Footer from '../components/Footer';
+
+interface Props {
   data: LearnPageData;
   pageContext: LearnPageContext;
-};
-
-export default ({
+}
+const LearnLayout = ({
   data: {
     doc: {
       frontmatter: { title, description },
@@ -21,30 +23,48 @@ export default ({
     },
   },
   pageContext: { slug, next, previous, relativePath, navigationData },
-}: Props) => {
+}: Props): React.ReactNode => {
+  let previousSlug = '';
+
+  if (typeof window !== 'undefined' && window.previousPath) {
+    previousSlug =
+      window.previousPath.split('/learn')[1]?.substr(1) ||
+      'introduction-to-nodejs';
+  }
+
   return (
-    <Layout title={title} description={description}>
-      <Hero title={title} />
-      <Navigation currentSlug={slug} sections={navigationData} />
-      <Article
-        title={title}
-        html={html}
-        tableOfContents={tableOfContents}
-        next={next}
-        authors={authors}
-        previous={previous}
-        relativePath={relativePath}
-      />
-    </Layout>
+    <>
+      <Layout title={title} description={description} showFooter={false}>
+        <main className="grid-container">
+          <Navigation
+            currentSlug={slug}
+            previousSlug={previousSlug}
+            label="Secondary"
+            sections={navigationData}
+          />
+          <Article
+            title={title}
+            html={html}
+            tableOfContents={tableOfContents}
+            next={next}
+            authors={authors}
+            previous={previous}
+            relativePath={relativePath}
+          />
+        </main>
+      </Layout>
+      <Footer />
+    </>
   );
 };
+export default LearnLayout;
 
 export const query = graphql`
   query DocBySlug($slug: String!) {
     doc: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
-      tableOfContents
+      tableOfContents(absolute: false, pathToSlugField: "frontmatter.path")
       frontmatter {
         title
         description

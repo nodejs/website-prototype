@@ -97,7 +97,7 @@ const interval = setInterval(() => {
 
 `setInterval` starts a function every n milliseconds, without any consideration about when a function finished its execution.
 
-If a function takes always the same amount of time, it's all fine:
+If a function always takes the same amount of time, it's all fine:
 
 ![setInterval working fine](setinterval-ok.png)
 
