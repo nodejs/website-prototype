@@ -49,7 +49,7 @@ npm install typescript
 
 Now we can compile it to JavaScript using `tsc` command in the terminal. Let's do it!
 
-Assuming that our file is named `example.ts` the command would like like that:
+Assuming that our file is named `example.ts`, the command would look like:
 
 ```bash
 tsc example.ts

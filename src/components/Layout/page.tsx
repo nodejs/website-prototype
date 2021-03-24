@@ -11,6 +11,7 @@ interface Page {
   title: string;
   description: string;
   authors: string[];
+  location?: Location;
 }
 
 export default function PageLayout(props: Page): JSX.Element {
@@ -21,9 +22,10 @@ export default function PageLayout(props: Page): JSX.Element {
     title,
     description,
     authors,
+    location,
   } = props;
   return (
-    <Layout title={title} description={description}>
+    <Layout title={title} location={location} description={description}>
       <main className="page">
         <Article
           html={html}

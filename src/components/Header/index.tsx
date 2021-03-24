@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { KeyboardEvent } from 'react';
 import logoLight from '../../images/logos/nodejs-logo-light-mode.svg';
 import logoDark from '../../images/logos/nodejs-logo-dark-mode.svg';
 import defaultDarkModeController from '../../util/darkModeController';
@@ -13,6 +13,13 @@ const Header = ({
   darkModeController = defaultDarkModeController,
 }: Props): JSX.Element => {
   const isMobile = useMediaQuery('(max-width: 870px)');
+
+  const keyPressDarkModeHandler: (
+    e: KeyboardEvent<HTMLButtonElement>
+  ) => void = e => {
+    if (e.charCode === 13 || e.charCode === 32) darkModeController.toggle();
+  };
+
   return (
     <nav aria-label="Primary" className="nav">
       <div className="nav__container">
@@ -82,6 +89,7 @@ const Header = ({
               <button
                 type="button"
                 className="dark-mode-toggle"
+                onKeyPress={keyPressDarkModeHandler}
                 onMouseDown={darkModeController.handleEvent}
                 onMouseUp={darkModeController.handleEvent}
               >

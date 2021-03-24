@@ -12,7 +12,11 @@ import DownloadReleases from '../components/DownloadReleases';
 import DownloadAdditional from '../components/DownloadAdditional';
 import '../styles/download.scss';
 
-export default function DownloadPage(): JSX.Element {
+interface Props {
+  location: Location;
+}
+
+export default function DownloadPage({ location }: Props): JSX.Element {
   const releaseHistory = useReleaseHistory().slice(0, 50);
   const staticReleaseData = getStaticReleaseData();
   const [typeRelease, setTypeRelease] = useState('LTS');
@@ -29,7 +33,11 @@ export default function DownloadPage(): JSX.Element {
   ): void => setTypeRelease(selected);
 
   return (
-    <Layout title="Download Node.js" description="Come get me!">
+    <Layout
+      title="Download Node.js"
+      description="Come get me!"
+      location={location}
+    >
       <span className="home-page -download">
         <DownloadHeader release={selectedType} />
         <p className="release-description">

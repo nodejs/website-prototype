@@ -12,6 +12,7 @@ import Footer from '../components/Footer';
 interface Props {
   data: LearnPageData;
   pageContext: LearnPageContext;
+  location: Location;
 }
 const LearnLayout = ({
   data: {
@@ -23,6 +24,7 @@ const LearnLayout = ({
     },
   },
   pageContext: { slug, next, previous, relativePath, navigationData },
+  location,
 }: Props): React.ReactNode => {
   let previousSlug = '';
 
@@ -34,7 +36,12 @@ const LearnLayout = ({
 
   return (
     <>
-      <Layout title={title} description={description} showFooter={false}>
+      <Layout
+        title={title}
+        description={description}
+        location={location}
+        showFooter={false}
+      >
         <main className="grid-container">
           <Navigation
             currentSlug={slug}

@@ -15,6 +15,10 @@ import ShellBox from '../components/ShellBox';
 import '../styles/docs.scss';
 import '../styles/article-reader.scss';
 
+interface Props {
+  location: Location;
+}
+
 const API_DOCS_OBJ_KEYS = ['events', 'methods', 'properties', 'classes'];
 const DOCUMENT_ELEMENT_TYPES = ['module', 'event', 'method', 'class'];
 const sanitizer = dompurify.sanitize;
@@ -627,7 +631,7 @@ function sideBarSection(
   );
 }
 
-export default function APIDocsPage(): JSX.Element {
+export default function APIDocsPage({ location }: Props): JSX.Element {
   const title = 'API Docs';
   const description = 'Come learn yourself something.';
   const userOS = detectOS();
@@ -685,7 +689,12 @@ export default function APIDocsPage(): JSX.Element {
 
   return (
     <>
-      <Layout title={title} description={description} showFooter={false}>
+      <Layout
+        title={title}
+        description={description}
+        location={location}
+        showFooter={false}
+      >
         <main className="grid-container">
           <nav aria-label="Secondary" className="api-nav">
             <ul className="api-nav__list">

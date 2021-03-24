@@ -45,6 +45,29 @@ require('path').extname('/test/something') // ''
 require('path').extname('/test/something/file.txt') // '.txt'
 ```
 
+### `path.format()`
+
+Returns a path string from an object, This is the opposite of `path.parse`<br>
+`path.format` accepts an object as argument with the follwing keys:
+* `root`: the root
+* `dir`: the folder path starting from the root
+* `base`: the file name + extension
+* `name`: the file name
+* `ext`: the file extension
+
+`root` is ignored if `dir` is provided<br>
+`ext` and `name` are ignored if `base` exists
+
+```js
+// POSIX
+require('path').format({ dir: '/Users/joe', base: 'test.txt' }) //  '/Users/joe/test.txt'
+
+require('path').format({ root: '/Users/joe', name: 'test', ext: 'txt' }) //  '/Users/joe/test.txt'
+
+//WINODWS
+require('path').format({ dir: 'C:\\Users\\joe', base: 'test.txt' }) //  'C:\\Users\\joe\\test.txt'
+```
+
 ### `path.isAbsolute()`
 
 Returns true if it's an absolute path

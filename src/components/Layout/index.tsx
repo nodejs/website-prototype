@@ -18,7 +18,7 @@ interface Props {
   img?: string;
   href?: string;
   showFooter?: boolean;
-  location?: string;
+  location?: Location;
 }
 
 const Layout = ({
@@ -27,10 +27,16 @@ const Layout = ({
   description,
   img,
   showFooter = true,
+  location,
 }: Props): JSX.Element => {
   return (
     <>
-      <SEO title={title} description={description} img={img} />
+      <SEO
+        title={title}
+        description={description}
+        location={location}
+        img={img}
+      />
       <div className="layout-container">
         <Header darkModeController={darkModeController} />
         {children}

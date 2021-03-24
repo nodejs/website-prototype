@@ -37,7 +37,6 @@ This piece of code reads the content of a folder, both files and subfolders, and
 
 ```js
 const fs = require('fs')
-const path = require('path')
 
 const folderPath = '/Users/joe'
 

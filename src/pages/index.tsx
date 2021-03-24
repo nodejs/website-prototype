@@ -16,7 +16,6 @@ import leafsIllustrationMiddle from '../images/illustrations/leafs-middle.svg';
 import leafsIllustrationBack from '../images/illustrations/leafs-back.svg';
 import dotsIllustration from '../images/illustrations/dots.svg';
 import InstallTabs from '../components/InstallTabs';
-import GetStartedSection from '../components/GetStartedSection';
 
 interface NodeFeatureProps {
   icon?: ReactElement;
@@ -64,16 +63,7 @@ const NodeFeature = ({
 export default function Index({
   data: {
     page: {
-      frontmatter: {
-        displayTitle,
-        subTitle,
-        description,
-        learnLinkText,
-        beginnerGuideHeaderText,
-        beginnerGuideBodyText,
-        doMoreWithNodeHeaderText,
-        doMoreWithNodeBodyText,
-      },
+      frontmatter: { displayTitle, subTitle, description },
     },
   },
 }: HomepageProps): JSX.Element {
@@ -114,14 +104,6 @@ export default function Index({
             />
           ))}
         </section>
-
-        <GetStartedSection
-          learnLinkText={learnLinkText}
-          beginnerGuideHeaderText={beginnerGuideHeaderText}
-          beginnerGuideBodyText={beginnerGuideBodyText}
-          doMoreWithNodeHeaderText={doMoreWithNodeHeaderText}
-          doMoreWithNodeBodyText={doMoreWithNodeBodyText}
-        />
       </main>
     </Layout>
   );
@@ -139,10 +121,6 @@ export const query = graphql`
         subTitle
         description
         learnLinkText
-        beginnerGuideHeaderText
-        beginnerGuideBodyText
-        doMoreWithNodeHeaderText
-        doMoreWithNodeBodyText
         nodeFeatureHeader1
         nodeFeatureHeader2
         nodeFeatureHeader3

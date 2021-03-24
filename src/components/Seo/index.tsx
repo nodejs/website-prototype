@@ -6,9 +6,10 @@ interface Props {
   title?: string;
   description?: string;
   img?: string;
+  location?: Location;
 }
 
-const SEO = ({ title, description, img }: Props): JSX.Element => (
+const SEO = ({ title, description, img, location }: Props): JSX.Element => (
   <Helmet
     title={title || config.title}
     meta={[
@@ -28,7 +29,7 @@ const SEO = ({ title, description, img }: Props): JSX.Element => (
       },
       {
         property: 'og:url',
-        content: `${config.siteUrl}`,
+        content: `${config.siteUrl}${location && location?.pathname}`,
       },
       {
         property: 'og:site_name',
@@ -59,7 +60,7 @@ const SEO = ({ title, description, img }: Props): JSX.Element => (
       },
       {
         name: 'twitter:url',
-        content: `${config.siteUrl}`,
+        content: `${config.siteUrl}${location && location?.pathname}`,
       },
       {
         name: 'twitter:creator',

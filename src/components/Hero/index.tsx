@@ -9,7 +9,7 @@ import './Hero.scss';
 
 interface Props {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }
 
 const Hero = ({ title, subTitle }: Props): JSX.Element => {

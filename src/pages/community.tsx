@@ -3,7 +3,7 @@ import React from 'react';
 import { Page } from '../types';
 import PageLayout from '../components/Layout/page';
 
-export default function CommunityPage({ data }: Page): JSX.Element {
+export default function CommunityPage({ data, location }: Page): JSX.Element {
   const { title, description } = data.page.frontmatter;
   const { html, tableOfContents } = data.page;
   const { authors } = data.page.fields;
@@ -16,6 +16,7 @@ export default function CommunityPage({ data }: Page): JSX.Element {
       authors={authors}
       tableOfContents={tableOfContents}
       editPath="content/community/index.md"
+      location={location}
     />
   );
 }

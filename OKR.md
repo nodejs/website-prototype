@@ -23,7 +23,7 @@ Here are some external references that may help provide further context on OKRs.
 
 * **Objective:** Continuity of process
 
-  * **Key Result:** Staging and CI have each have a published technical administration summary and a how-to guide.
+  * **Key Result:** Staging and CI each have a published technical administration summary and a how-to guide.
   * **Key Result:** Consider using issue templates to facilitate operations.
 
 * **Objective:** Identify areas of progress and future goals
