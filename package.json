@@ -37,6 +37,7 @@
     "gatsby-remark-images": "^5.1.0",
     "gatsby-remark-prismjs": "^5.1.0",
     "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-source-git": "^1.1.0",
     "gatsby-transformer-remark": "^4.1.0",
     "gatsby-transformer-yaml": "^3.4.0",
     "intersection-observer": "^0.12.0",

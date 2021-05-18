@@ -70,6 +70,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-git',
+      options: {
+        name: 'i18n-repo',
+        remote: 'https://github.com/nodejs/i18n.git',
+        branch: 'master',
+        patterns: 'content/v14.x/en-US/doc'
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
