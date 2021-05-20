@@ -1,27 +1,26 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import dompurify from 'dompurify';
 import Layout from '../components/Layout';
 
-const sanitizer = dompurify.sanitize;
 const title = 'Download Node.js';
 const description = 'Come get me!';
 
 interface Props {
   data: {
     doc: {
-      edges: string[] | {};
+      edges: string[] | Record<string, unknown>;
     };
   };
 }
 
 const DocsLayout = ({ data }: Props): React.ReactNode => (
-  <Layout title={title} description={description} style={{width: '100%'}}>
+  <Layout title={title} description={description}>
     <main>
       {console.log(data)}
       <p
+        style={{ width: '100%' }}
         dangerouslySetInnerHTML={{
-          __html: sanitizer(data.doc.edges[102].node.html),
+          __html:data.doc.edges[102].node.html,
         }}
       />
     </main>
@@ -35,7 +34,7 @@ export const query = graphql`
       edges {
         node {
           fileAbsolutePath
-					frontmatter {
+          frontmatter {
             title
           }
           html
