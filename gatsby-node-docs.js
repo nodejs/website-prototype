@@ -22,10 +22,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(() => {
+  result.data.allMarkdownRemark.edges.forEach(node => {
     createPage({
-      // path: node.frontmatter.slug,
-      path: 'test',
+      path: node.frontmatter.slug,
+      // path: 'test',
       component: docsTemplate,
     });
   });

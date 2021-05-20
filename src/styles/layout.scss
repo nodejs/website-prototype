@@ -521,7 +521,8 @@ details {
   }
 }
 
-.blog-container {
+.blog-container,
+.docs-container {
   display: flex;
   justify-content: center;
 }

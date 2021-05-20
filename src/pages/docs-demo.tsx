@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import Article from '../components/Article';
 import Layout from '../components/Layout';
 
 const title = 'Download Node.js';
@@ -13,19 +14,22 @@ interface Props {
   };
 }
 
-const DocsLayout = ({ data }: Props): React.ReactNode => (
-  <Layout title={title} description={description}>
-    <main>
-      {console.log(data)}
-      <p
-        style={{ width: '100%' }}
-        dangerouslySetInnerHTML={{
-          __html:data.doc.edges[102].node.html,
-        }}
-      />
-    </main>
-  </Layout>
-);
+const DocsLayout = ({ data }: Props): JSX.Element => {
+  const authors = [''];
+  return (
+    <Layout title={title} description={description}>
+      <main className="docs-container">
+        <Article
+          title=""
+          html={data.doc.edges[105].node.html}
+          authors={authors}
+          editPath="node_modules/node-i18n/content/v12.x/en-US/doc/"
+        />
+        {console.log(data)}
+      </main>
+    </Layout>
+  );
+};
 export default DocsLayout;
 
 export const query = graphql`
@@ -38,6 +42,7 @@ export const query = graphql`
             title
           }
           html
+          tableOfContents(absolute: true, pathToSlugField: "frontmatter.path")
         }
       }
     }
