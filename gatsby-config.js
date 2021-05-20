@@ -70,12 +70,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-git',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'i18n-repo',
-        remote: 'https://github.com/nodejs/i18n.git',
-        branch: 'master',
-        patterns: 'content/v14.x/en-US/doc'
+        name: 'markdown-docs',
+        path: './node_modules/node-i18n/content/v12.x/en-US/doc/api'
       },
     },
     {
