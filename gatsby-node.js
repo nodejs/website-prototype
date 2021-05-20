@@ -1,6 +1,7 @@
 // Use in this file CommonJS syntax see https://www.gatsbyjs.org/docs/migrating-from-v1-to-v2/#convert-to-either-pure-commonjs-or-pure-es6
 const path = require('path');
 const createSlug = require('./util-node/createSlug');
+require('./gatsby-node-docs');
 
 const BLOG_POST_FILENAME_REGEX = /([0-9]+)-([0-9]+)-([0-9]+)-(.+)\.md$/;
 
