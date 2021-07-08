@@ -144,6 +144,7 @@ fetch('/todos.json')
     console.log('Request failed', error)
   })
 ```
+> <code><a href="https://www.npmjs.com/package/node-fetch">node-fetch</a></code> is  minimal code for window.fetch compatible API on Node.js runtime.
 
 In this example, we call `fetch()` to get a list of TODO items from the `todos.json` file found in the domain root, and we create a chain of promises.
 
