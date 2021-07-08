@@ -39,7 +39,7 @@ The most common example Hello World of Node.js is a web server:
 const http = require('http')
 
 const hostname = '127.0.0.1'
-const port = 3000
+const port = process.env.PORT || 3000
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200
@@ -60,7 +60,8 @@ Node.js has a fantastic [standard library](https://nodejs.org/api/), including f
 
 The `createServer()` method of `http` creates a new HTTP server and returns it.
 
-The server is set to listen on the specified port and host name. When the server is ready, the callback function is called, in this case informing us that the server is running.
+The server is set to listen on the specified port and host name. When you deploy your application to a Node-specific hosted environment, a PORT environment variable is provided on which your server can run. To access your application, your port property must be assigned the process.env.PORT value. To allow for both offline and hosted usage, we define the port as const port = 3000 || process.env.PORT. Note that you can use any port number of your choice if it is not currently in use by any other service. 
+When the server is ready, the callback function is called, in this case informing us that the server is running.
 
 Whenever a new request is received, the [`request` event](https://nodejs.org/api/http.html#http_event_request) is called, providing two objects: a request (an [`http.IncomingMessage`](https://nodejs.org/api/http.html#http_class_http_incomingmessage) object) and a response (an [`http.ServerResponse`](https://nodejs.org/api/http.html#http_class_http_serverresponse) object).
 
