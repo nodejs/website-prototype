@@ -41,4 +41,4 @@ try {
 }
 ```
 
-Once you get the file descriptor, in whatever way you choose, you can perform all the operations that require it, like calling `fs.open()` and many other operations that interact with the filesystem.
+Once you get the file descriptor, in whatever way you choose, you can perform all the operations that require it, like calling `fs.close()` and many other operations that interact with the filesystem.
