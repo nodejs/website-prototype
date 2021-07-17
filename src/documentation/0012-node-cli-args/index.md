@@ -79,6 +79,12 @@ const args = require('minimist')(process.argv.slice(2))
 args['name'] //joe
 ```
 
+Install the required `minimist` package using `npm` (lesson about the package manager comes [later on](https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager)).
+
+```js
+npm install minimist
+```
+
 This time you need to use double dashes before each argument name:
 
 ```bash
