@@ -1,4 +1,5 @@
-@import 'learn.scss';
+@import "learn.scss";
+@import "article-reader.scss";
 
 .side-nav-about {
   @extend .side-nav;
@@ -14,4 +15,17 @@
       top: 1.8rem;
     }
   }
+
+  @media (max-width: 800px) {
+    top: calc(var(--nav-height) * 2);
+    position: fixed;
+    width: 100%;
+    margin-top: 3.4px
+  }
+}
+
+.article-reader {
+  @extend .article-reader;
+  top: calc(var(--nav-height) * 0.5);
+  position: relative;
 }
