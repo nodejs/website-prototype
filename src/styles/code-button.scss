@@ -1,0 +1,14 @@
+.code-button-container {
+  display: flex;
+}
+.code-button {
+  background-color: var(--brand2);
+  color: black;
+  font-family: var(--mono);
+  position: relative;
+  top: 8px;
+}
+
+.toaster-class {
+  font-family: var(--mono);
+}

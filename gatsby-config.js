@@ -103,6 +103,18 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              buttonContainerClass: `code-button-container`,
+              buttonClass: `code-button`,
+              buttonText: `Copy`,
+              tooltipText: `Copy to clipboard`,
+              toasterClass: `toaster-class`,
+              toasterTextClass: `toaster-Text`,
+              toasterText: 'Copied to clipboard',
+            },
+          },
           'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-autolink-headers',
