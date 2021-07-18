@@ -192,6 +192,7 @@ also have commiter rights on the repo.
 * [@ogonzal87](https://github.com/ogonzal87) - Oscar Gonzalez
 * [@ollelauribostrom](https://github.com/ollelauribostrom) - Olle Lauri Boström
 * [@pierreneter](https://github.com/pierreneter) - Nguyễn J Huỳnh Long
+* [@rodion-arr](https://github.com/rodion-arr) - Rodion Abdurakhimov
 * [@sagirk](https://github.com/sagirk) - Sagir Khan
 * [@saulonunesdev](https://github.com/saulonunesdev) - Saulo Nunes
 * [@skllcrn](https://github.com/skllcrn) - Christopher
