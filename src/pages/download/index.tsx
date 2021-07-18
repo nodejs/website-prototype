@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
-import { detectOS } from '../util/detectOS';
-import { getUpcomingReleases } from '../util/getUpcomingReleases';
-import Layout from '../components/Layout';
-import DownloadHeader from '../components/DownloadHeader';
-import DownloadToggle from '../components/DownloadToggle';
-import DownloadCards from '../components/DownloadCards';
-import DownloadReleases from '../components/DownloadReleases';
-import DownloadAdditional from '../components/DownloadAdditional';
-import { NodeReleaseData, NodeReleaseLTSNPMVersion } from '../types';
-import '../styles/download.scss';
+import { detectOS } from '../../util/detectOS';
+import { getUpcomingReleases } from '../../util/getUpcomingReleases';
+import Layout from '../../components/Layout';
+import DownloadHeader from '../../components/DownloadHeader';
+import DownloadToggle from '../../components/DownloadToggle';
+import DownloadCards from '../../components/DownloadCards';
+import DownloadReleases from '../../components/DownloadReleases';
+import DownloadAdditional from '../../components/DownloadAdditional';
+import { NodeReleaseData, NodeReleaseLTSNPMVersion } from '../../types';
+import '../../styles/download.scss';
 
 export interface DownloadNodeReleases {
   nodeReleases: {

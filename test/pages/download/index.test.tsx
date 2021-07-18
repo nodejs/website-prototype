@@ -1,11 +1,13 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import DownloadPage, { DownloadNodeReleases } from '../../src/pages/download';
+import DownloadPage, {
+  DownloadNodeReleases,
+} from '../../../src/pages/download';
 import {
   createNodeReleasesData,
   createNodeReleasesDataDetail,
-} from '../__fixtures__/page';
-import '../__mocks__/intersectionObserverMock';
+} from '../../__fixtures__/page';
+import '../../__mocks__/intersectionObserverMock';
 
 const mockNodeReleasesData = createNodeReleasesData();
 const mockNodeReleasesDataDetail = createNodeReleasesDataDetail();

@@ -5,9 +5,7 @@ import Layout from '../components/Layout';
 import Article from '../components/Article';
 import Footer from '../components/Footer';
 import '../styles/article-reader.scss';
-import AboutPageSideNavBar, {
-  AboutPageKeys,
-} from '../components/AboutPageSideNavBar';
+import SideNavBar, { SideNavBarKeys } from '../components/SideNavBar';
 
 export default function GovernancePage({ data }: Page): JSX.Element {
   const { title, description } = data.page.frontmatter;
@@ -18,7 +16,7 @@ export default function GovernancePage({ data }: Page): JSX.Element {
     <>
       <Layout title={title} description={description} showFooter={false}>
         <main className="grid-container">
-          <AboutPageSideNavBar pageKey={AboutPageKeys.governance} />
+          <SideNavBar pageKey={SideNavBarKeys.governance} />
           <Article
             title={title}
             html={html}

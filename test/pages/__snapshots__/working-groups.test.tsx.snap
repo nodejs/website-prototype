@@ -217,6 +217,13 @@ exports[`Working Groups page renders correctly 1`] = `
           >
             Security Reporting
           </a>
+          <a
+            class="t-body2 side-nav__item-community"
+            href="/download/package-manager"
+            id="link-download/package-manager"
+          >
+            Package Manager
+          </a>
         </ul>
       </nav>
       <article

@@ -77,6 +77,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'download',
+        path: `${__dirname}/content/download`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {

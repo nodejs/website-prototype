@@ -139,7 +139,7 @@ export interface BlogPageContext {
   navigationData: NavigationSectionData;
 }
 
-export interface AboutPageSideNavBarItem {
+export interface SideNavBarItem {
   title: string;
   slug: string;
 }

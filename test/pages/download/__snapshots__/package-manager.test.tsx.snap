@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Trademark page renders correctly 1`] = `
+exports[`Package Manager Page renders correctly 1`] = `
 <div>
   <div
     class="layout-container"
@@ -197,7 +197,7 @@ exports[`Trademark page renders correctly 1`] = `
             Resources
           </a>
           <a
-            class="t-body2 side-nav__item-community side-nav__item-community--active"
+            class="t-body2 side-nav__item-community"
             href="/trademark"
             id="link-trademark"
           >
@@ -218,7 +218,7 @@ exports[`Trademark page renders correctly 1`] = `
             Security Reporting
           </a>
           <a
-            class="t-body2 side-nav__item-community"
+            class="t-body2 side-nav__item-community side-nav__item-community--active"
             href="/download/package-manager"
             id="link-download/package-manager"
           >
@@ -279,7 +279,7 @@ exports[`Trademark page renders correctly 1`] = `
         >
           <a
             class="link"
-            href="https://github.com/nodejs/nodejs.dev/edit/main/content/about/trademark.md"
+            href="https://github.com/nodejs/nodejs.dev/edit/main/content/download/package-manager.md"
           >
             <span>
               Edit this page on GitHub

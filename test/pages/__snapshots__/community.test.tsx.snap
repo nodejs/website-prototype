@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Trademark page renders correctly 1`] = `
+exports[`Community Page renders correctly 1`] = `
 <div>
   <div
     class="layout-container"
@@ -169,7 +169,7 @@ exports[`Trademark page renders correctly 1`] = `
             Project Governance
           </a>
           <a
-            class="t-body2 side-nav__item-community"
+            class="t-body2 side-nav__item-community side-nav__item-community--active"
             href="/community"
             id="link-community"
           >
@@ -197,7 +197,7 @@ exports[`Trademark page renders correctly 1`] = `
             Resources
           </a>
           <a
-            class="t-body2 side-nav__item-community side-nav__item-community--active"
+            class="t-body2 side-nav__item-community"
             href="/trademark"
             id="link-trademark"
           >
@@ -279,7 +279,7 @@ exports[`Trademark page renders correctly 1`] = `
         >
           <a
             class="link"
-            href="https://github.com/nodejs/nodejs.dev/edit/main/content/about/trademark.md"
+            href="https://github.com/nodejs/nodejs.dev/edit/main/content/community/index.md"
           >
             <span>
               Edit this page on GitHub
