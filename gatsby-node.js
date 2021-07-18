@@ -3,6 +3,7 @@ const path = require('path');
 const fetch = require('node-fetch');
 const createSlug = require('./util-node/createSlug');
 const getReleaseStatus = require('./util-node/getReleaseStatus');
+const redirects = require('./util-node/redirects');
 
 const BLOG_POST_FILENAME_REGEX = /([0-9]+)-([0-9]+)-([0-9]+)-(.+)\.md$/;
 
@@ -12,6 +13,14 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const docTemplate = path.resolve('./src/templates/learn.tsx');
     const blogTemplate = path.resolve('./src/templates/blog.tsx');
+
+    Object.keys(redirects).forEach(from => {
+      createRedirect({
+        fromPath: from,
+        toPath: redirects[from],
+        isPermanent: true,
+      });
+    });
 
     resolve(
       graphql(
