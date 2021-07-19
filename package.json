@@ -18,7 +18,7 @@
     "classnames": "^2.2.6",
     "color": "^3.1.2",
     "color-string": "^1.5.3",
-    "dompurify": "2.2.9",
+    "dompurify": "2.3.0",
     "dotenv": "^9.0.2",
     "gatsby": "^3.9.1",
     "gatsby-plugin-canonical-urls": "^3.8.0",
