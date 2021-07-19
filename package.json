@@ -21,7 +21,7 @@
     "dompurify": "2.2.9",
     "dotenv": "^9.0.2",
     "gatsby": "^3.9.1",
-    "gatsby-plugin-canonical-urls": "^3.8.0",
+    "gatsby-plugin-canonical-urls": "^3.9.0",
     "gatsby-plugin-catch-links": "^3.9.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-manifest": "^3.7.1",
