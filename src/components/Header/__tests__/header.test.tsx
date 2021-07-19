@@ -1,10 +1,10 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import Header from '..';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
-// mock dark mode module for controlling dark mode HOC behaviour
+// mock dark mode module for controlling dark mode HOC behavior
 jest.mock('gatsby-plugin-dark-mode', () => ({
   ThemeToggler: jest.fn(),
 }));
@@ -33,6 +33,7 @@ describe('Tests for Header component', () => {
     // @ts-ignore
     useMediaQuery.mockReturnValue(false);
     toggleThemeMock = jest.fn();
+    ThemeToggler.mockClear();
   });
 
   afterEach(() => {
@@ -58,27 +59,39 @@ describe('Tests for Header component', () => {
   });
 
   describe('Theme color switcher', () => {
-    it('switches color theme to dark', () => {
-      const { container } = render(<Header />);
-      const toggler = container.querySelector('i.light-mode-only') as Element;
-
-      fireEvent.click(toggler);
-
+    it('switches color theme to dark', async () => {
+      ThemeToggler.mockImplementationOnce(
+        // eslint-disable-next-line react/display-name
+        (props: { children: unknown }): JSX.Element => (
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          <props.children theme="light" toggleTheme={toggleThemeMock} />
+        )
+      );
+      render(<Header />);
+      const toggle = await screen.findByRole('button');
+      fireEvent.click(toggle);
       expect(toggleThemeMock).toHaveBeenCalledWith('dark');
     });
 
-    it('switches color theme to light', () => {
-      const { container } = render(<Header />);
-      const toggler = container.querySelector('i.dark-mode-only') as Element;
-
-      fireEvent.click(toggler);
-
+    it('switches color theme to light', async () => {
+      ThemeToggler.mockImplementationOnce(
+        // eslint-disable-next-line react/display-name
+        (props: { children: unknown }): JSX.Element => (
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          <props.children theme="dark" toggleTheme={toggleThemeMock} />
+        )
+      );
+      render(<Header />);
+      const toggle = await screen.findByRole('button');
+      fireEvent.click(toggle);
       expect(toggleThemeMock).toHaveBeenCalledWith('light');
     });
 
-    it('ignore key presses on color switcher', () => {
-      const { container } = render(<Header />);
-      const toggler = container.querySelector('i.light-mode-only') as Element;
+    it('ignore key presses on color switcher', async () => {
+      render(<Header />);
+      const toggler = screen.getByRole('button');
 
       fireEvent.keyPress(toggler, { key: 'Enter', code: 13, charCode: 13 });
 
